@@ -123,6 +123,9 @@ alert(arr[0]) // => "маленький"
 myFish = ["angel", "clown", "mandarin", "surgeon"];// удаление элемента массива
 popped = myFish.pop(); // теперь popped = "surgeon", a myFish = ["angel", "clown", "mandarin"]
 
+var myArray = ['один', 'два', 'три']; //на месте обращает пор€док следовани€ элементов массива.
+myArray.reverse();                     // ѕервый элемент массива становитс€ последним, а последний Ч первым.
+console.log(myArray) // ['три', 'два', 'один']
 
 
 /////////////////////////÷икл for, перебор массива/////////////////////////////
@@ -318,7 +321,7 @@ var b = document.getElementById('faa');
 
 var image = document.getElementsByTagName('img');
     image.src = "bls.jpg";           // ¬ставл€ет в атрибут src ссылку на фаил
-var elem.getBoundingClientRect();   // возвращает размер элемента и его позицию относительно окна.
+    elem.getBoundingClientRect();   // возвращает размер элемента и его позицию относительно окна.
 
 children                             // Ц только дочерние узлы-элементы, то есть соответствующие тегам.
 firstElementChild, lastElementChild  //Ц соответственно, первый и последний дети-элементы.
@@ -1100,7 +1103,7 @@ function handl(arr ,classNam){
 }
 
 
-;///////////////////// new Image();//////////////////////////////////////////////
+///////////////////// new Image();//////////////////////////////////////////////
 
 img = new Image(); //  ƒл€ работы с изображени€ми в JavaScript используетс€ объект Image
 img.src = "http://bezrulya.ru/images/catalog/12000/12697.jpg";
