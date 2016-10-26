@@ -4,7 +4,7 @@ window.onload = function(){ // Загрузка страницы завершина
 }
 /////////////////////Шаблон проектирования MVC/////////////////////////
 
-var vies = {};// - Представления
+var vies = {};// - ПредставленияF
 var model = {};// - Модель
 var controller = {};// - Контроллер
 // 1.Пользователь взаимодействуент с приложением
@@ -37,6 +37,17 @@ isNaN("12") // Вернет false
 var a = "2", // строка
     b = +a;  // число
 
+parseInt() //принимает строку в качестве аргумента и возвращает
+//целое число в соответствии с указанным основанием системы счисления.
+parseInt("15px", 10);//10 это десятиричное число (наиболее часто используется)
+//рузельтат - 10
+////////////////////////Максимальное и минимальное значение///////////
+Math.max(a, b, c)// которая возвращает максимальное значение из аргументов
+alert( Math.max(1, 5, 2) ); // 5
+
+Math.mix(a, b, c)// которая возвращает максимальное значение из аргументов
+alert( Math.mix(1, 5, 2) ); // 1
+
 /////////////////////Кое-что о функциях////////////////////////////////
 
 function foo(ip){}; // Функции
@@ -49,7 +60,8 @@ foo();              // Вызов функции
 // 2. Первокласные функции - функция в функции. Пример:
 //                      function foo(){
 //                                    function ggg(){};
-//                       }
+//
+
 
 //////////////////////Генератор случайных чисел///////////////////////////
 Math.floor(Math.random() * 5); // - генерирует случайные числа от 0 до 4(включительно)
@@ -101,6 +113,11 @@ var upperText="ПриВет"
 document.write(upperText.toLowerCase()); // Возвращает строку нижнего реестра,
                                          // в этом примере возвратиться привет привет
 
+split() //разбивает объект String на массив строк путём разделения строки указанной подстрокой.
+var data = ('London is a capitol of GB').split(' ');
+console.log(data)
+//получиться    [ 'London', 'is', 'a', 'capitol', 'of', 'GB' ]
+
 ///////////////////////////////Массивы (так же см строки)/////////////////
 
 a = [1,2,45,12,5,34];
@@ -116,7 +133,7 @@ var array = [2, 5, 9];
 array.indexOf(5);                         // Вернется 1
 
 var arr = ["мой","маленький", "массив"]
-var my = arr.shift() // удаление элемента массива с индексом, здесь => "мой"
+var my = arr.shift() // удаление и перемещение(в данном случае переменную my)  элемента массива с индексом, здесь => "мой"
 alert(arr[0]) // => "маленький"
 // теперь arr = ["маленький", "массив"]
 
@@ -127,6 +144,29 @@ var myArray = ['один', 'два', 'три']; //на месте обращает порядок следования эле
 myArray.reverse();                     // Первый элемент массива становится последним, а последний — первым.
 console.log(myArray) // ['три', 'два', 'один']
 
+arr.slice(start, end) // создаёт новый массив и копирует в него элементы массива arr от start до end.
+                      //А если start и end не указаны, то копирует весь массив.
+    var fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+var citrus = fruits.slice(1, 3);
+
+// fruits contains ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango']
+// citrus contains ['Orange','Lemon']
+
+forEach()//выполняет указанную функцию один раз для каждого элемента в массиве.
+function logArrayElements(element, index, array) {
+    console.log('a[' + index + '] = ' + element);
+}
+// Обратите внимание на пропуск по индексу 2, там нет элемента, поэтому он не посещается
+[2, 5, , 9].forEach(logArrayElements);
+// логи:
+// a[0] = 2
+// a[1] = 5
+// a[3] = 9
+
+split() //разбивает объект String на массив строк путём разделения строки указанной подстрокой.
+var data = ('London is a capitol of GB').split(' ');
+console.log(data)
+//получиться    [ 'London', 'is', 'a', 'capitol', 'of', 'GB' ]
 
 /////////////////////////Цикл for, перебор массива/////////////////////////////
 
@@ -253,13 +293,16 @@ var Kevin = new Dog('Kevin','34');
         this.name = name;
         this.old = old;
     }
-    Robot.prototype.toString = function(){ // Мы переопределили метод toString специально для Robot  (toString и toLocaleString Преобразуют значение свойст в строку в строку)
+    Robot.prototype.toString = function(){ // Мы переопределили метод toString специально для Robot
+                                            // (toString и toLocaleString Преобразуют значение свойст в строку в строку)
         return this.name + this.old
     }
     var Gavi = new Robot('Gavi','34');
     console.log(Gavi.toString());
 
 ////////////////////Цепочка прототипов конструкторов//////////////////////////
+
+////////////// Устаревшая хуйня а именно Dog2.prototype = new Dog1()
 function Dog1(name,old,test1){
     this.name = name;
     this.old = old;
@@ -272,9 +315,10 @@ function Dog2(test2){
         console.log('test2');
     }
 }
-Dog2.prototype = new Dog1(); // Вот конструктор Dog2 унаследует свойства от конструтора Dog1
+Dog2.prototype = new Dog1(); // Вот конструктор Dog2 унаследует свойства от конструтора Dog1()(!!! Устаревшпя!!!)_
 function Dog3(name,old,test3){
-    Dog1.call(this,name,old); // чтобы не писать this.name = name; this.old = old; можно их вызвать из Dog1
+/*!!!!!!*/    Dog1.call(this,name,old); // чтобы не писать this.name = name; this.old = old; можно их вызвать из Dog1
+                                        // иили еще порще прописать Dog1.apply(this, arguments); и можно не прописывать name old
     this.test3 = function(){
         console.log('test3');
     }
@@ -282,6 +326,277 @@ function Dog3(name,old,test3){
 Dog3.prototype = new Dog2(); // Вот конструктор Dog3 унаследует свойства от конструтора Dog2
 var Kevin = new Dog3('Kevin','34');
 console.log(Kevin.constructor); // .constructor определит изначальный конструктор
+////////////////
+/////////////Не устаревшая
+Object.create // наследование от одного конструктора к другомму
+
+// 1. Конструктор Animal
+function Animal(name) {
+    this.name = name;
+    this.speed = 0;
+}
+
+// 1.1. Методы -- в прототип
+Animal.prototype.stop = function() {
+    this.speed = 0;
+    alert( this.name + ' стоит' );
+}
+Animal.prototype.run = function(speed) {
+    this.speed += speed;
+    alert( this.name + ' бежит, скорость ' + this.speed );
+};
+// 2. Конструктор Rabbit
+function Rabbit(name) {
+    this.name = name;
+    this.speed = 0;
+}
+// 2.1. Наследование
+Rabbit.prototype = Object.create(Animal.prototype);// наследование от одного конструктора к другомму
+                                                   // в даном случае Rabbit наследует от Animal
+Rabbit.prototype.constructor = Rabbit;     // В prototype по умолчанию всегда находится свойство constructor, указывающее на функцию-конструктор.
+                                                //    В частности, Rabbit.prototype.constructor == Rabbit. Если мы рассчитываем использовать это свойство,
+                                                //    то при замене prototype через Object.create нужно его явно сохранить
+                                                // иными словами чтобы конструктор был именно Rabbit а не  Animal,
+// 2.2. Методы Rabbit
+Rabbit.prototype.jump = function() {
+    this.speed++;
+    alert(this.name + ' прыгает, скорость ' + this.speed);
+}
+
+
+
+
+////////////////////////////////Function.prototype.call()/////////////////////////////////////
+
+fun.call(this, arg1, arg2)//  вызов функции  fun(это может быть конструктор) для функции(или конструктора)
+                          // которая определенеа в this, при этом аргуметы в fun становятся аргументами в
+                          // функции(или конструктора) которая определенеа в this
+////пример простой
+function showFullName() {
+    alert( this.firstName + " " + this.lastName );
+}
+
+var user = {
+    firstName: "Василий",
+    lastName: "Петров"
+};
+
+// функция вызовется с this=user
+showFullName.call(user) // "Василий Петров"  в двном слоучае объект user становится аргументом для showFullName
+
+//// пример более сложнй
+var user = {
+    firstName: "Василий",
+    surname: "Петров",
+    patronym: "Иванович"
+};
+
+function showFullName(firstPart, lastPart) {
+    alert( this[firstPart] + " " + this[lastPart] );
+}
+
+// f.call(контекст, аргумент1, аргумент2, ...)
+showFullName.call(user, 'firstName', 'surname') // "Василий Петров"
+showFullName.call(user, 'firstName', 'patronym') // "Василий Иванович"
+
+///// еще пример для конструкторов
+function Dog1(name,old,test1){
+    this.name = name;
+    this.old = old;
+    this.test1 = function(){
+        console.log('test1');
+    }
+}
+
+function Dog3(name,old,test3){
+    /*!!!!!!*/    Dog1.call(this,name,old); // чтобы не писать this.name = name; this.old = old; можно их вызвать из Dog1
+    this.test3 = function(){
+        console.log('test3');
+    }
+}
+// или еще пример
+function Product(name, price) {
+    this.name = name;
+    this.price = price;
+
+    if (price < 0) {
+        throw RangeError('Нельзя создать продукт ' +
+            this.name + ' с отрицательной ценой');
+    }
+}
+
+function Food(name, price) {
+    Product.call(this, name, price);
+    this.category = 'еда';
+}
+
+Food.prototype = Object.create(Product.prototype); // тоже самое что и Food.prototype = new Product()
+                                                   // то есть Food унаследует свойства от Product/*!!/
+var cheese = new Food('картошка', 5);
+
+  // /*!!/то есть получистся вот такой конструктор
+function Food(name, price) {
+    this.name = name;
+    this.price = price;
+    this.category = 'еда';
+    if (price < 0) {
+        throw RangeError('Нельзя создать продукт ' +
+            this.name + ' с отрицательной ценой');
+    }
+}
+//////////////////////////////Псевдомассив аргументов "arguments"/////////////////////////////
+
+// Доступ а аргуменам можно осуществить через псевдомасив Доступ к ним осуществляется через «псевдо-массив» arguments.
+function sayHi() {
+    for (var i = 0; i < arguments.length; i++) {
+        alert( "Привет, " + arguments[i] );
+    }
+}
+
+sayHi("Винни", "Пятачок"); // 'Привет, Винни', 'Привет, Пятачок'
+// т.е. здесь функции передается псевдомасив arguments = ['Винни','Пятачок']
+// но arguments – это не массив
+//ОШИБКА
+function sayHi() {
+    var a = arguments.shift(); // ошибка! нет такого метода!
+}
+
+sayHi(1);
+
+///////////////////////////////[].slice.call(arguments)///////////////////////////
+
+//[].slice.call(arguments) //простой способ сделать из arguments настоящий массив.
+
+function printArgs() {
+    var args = [].slice.call(arguments);
+    alert( args.join(', ') ); // args - полноценный массив из аргументов
+}
+printArgs('Привет', 'мой', 'мир'); // Привет, мой, мир
+
+////////////////////////////////////Function.prototype.apply()/////////////////////
+
+//Вызов функции при помощи func.apply работает аналогично func.call, но принимает массив аргументов вместо списка.
+func.apply(context, [arg1, arg2]);
+// Пример
+  //  Есть два одинаковых конструктора
+
+    function Animal(name) {
+        this.name = name;
+        this.speed = 0;
+    }
+
+    function Rabbit(name) {
+        this.name = name;
+        this.speed = 0;
+    }
+  //  ЧТОБЫ КАРОЧЕ НЕ ПЛАДИТЬ ОДИНАКОВУЮ ХУЙНЮ МОЖНО ПЕРЕБРОСИТТЬ СВОЙТВА  ИЗ Animal   В Rabbit
+    function Animal(name) {
+        this.name = name;
+        this.speed = 0;
+    }
+
+    function Rabbit(name) {
+        Animal.apply(this, arguments);
+    }
+// еще пример
+
+
+var user = {
+    firstName: "Василий",
+    surname: "Петров",
+    patronym: "Иванович"
+};
+
+function showFullName(firstPart, lastPart) {
+    alert( this[firstPart] + " " + this[lastPart] );
+}
+
+// f.call(контекст, аргумент1, аргумент2, ...)
+showFullName.apply(user, ['firstName', 'surname'])// "Василий Петров"
+
+
+//В частности, эти две строчки сработают одинаково:
+showFullName.call(user, 'firstName', 'surname');// "Василий Петров"
+showFullName.apply(user, ['firstName', 'surname']);// "Василий Петров"
+
+// получить максимум из элементов arr
+var arr = [];
+arr.push(1);
+arr.push(5);
+arr.push(2);
+alert( Math.max.apply(null, arr) ); // 5
+//В качестве контекста this был передан null.
+//Но в данном случае в качестве контекста можно передавать что угодно, поскольку
+//в своей внутренней реализации метод Math.max не использует this.
+//Действительно, зачем this, если нужно всего лишь выбрать максимальный из аргументов?
+
+///////////////////////////////////////////Конструкция try…catch////////////////////////////
+
+try {
+    // код ...
+} catch (err) {
+    // обработка ошибки
+}
+// Выполняется код внутри блока try.
+//Если в нём ошибок нет, то блок catch(err) игнорируется,
+//то есть выполнение доходит до конца try и потом прыгает через catch.
+//Если в нём возникнет ошибка, то выполнение try на ней прерывается
+//,и управление прыгает в начало блока catch(err).
+
+//Пример без ошибок: при запуске сработают alert (1) и (2):
+try {
+    alert('Начало блока try');  // (1) <--
+    // .. код без ошибок
+    alert('Конец блока try');   // (2) <--
+} catch(e) {
+    alert('Блок catch не получит управление, так как нет ошибок'); // (3)
+}
+alert("Потом код продолжит выполнение...");
+
+
+//Пример с ошибкой: при запуске сработают (1) и (3):
+try {
+    alert('Начало блока try');  // (1) <--
+    lalala; // ошибка, переменная не определена!
+    alert('Конец блока try');  // (2)
+} catch(e) {
+    alert('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack); // (3) <--
+}
+alert("Потом код продолжит выполнение...");
+
+///////////////////////////////////Конструктор Error////////////////////////////////////
+
+new Error //создаёт объект ошибки.
+//Обычно, вы создаёте объект Error с намерением возбудить ошибку
+//с помощью ключевого слова throw. Вы можете обработать ошибку с помощью конструкции try...catch:
+try {
+    throw new Error('Уупс!');
+} catch (e) {
+    alert(e.name + ': ' + e.message);
+}
+e.name //Тип ошибки.
+e.message //Текстовое сообщение о деталях ошибки.
+e.stack //Везде, кроме IE8-, есть также свойство stack, которое содержит строку
+//с информацией о последовательности вызовов, которая привела к ошибке.
+
+//В JavaScript встроен ряд конструкторов для стандартных ошибок: SyntaxError, ReferenceError, RangeError
+
+///////////////////////////////////Оператор throw//////////////////////////////////////////
+
+//Оператор throw генерирует ошибку.
+var data = '{ "age": 30 }'; // данные неполны
+try {
+
+    var user = JSON.parse(data); // <-- выполнится без ошибок (JSON.parse делает из строки формат JSON)
+    if (!user.name) {
+        throw new SyntaxError("Данные некорректны");
+    }
+    alert( user.name );
+} catch (e) {
+    alert( "Извините, в данных ошибка" );
+}
+
+
 
 ///////////////////Переопределение свойст встроенных объектов/////////////////
 
@@ -1111,30 +1426,29 @@ img.width = 100;
 img.height = 100;
 
 // ПРИМЕР
-var img = new Image(100, 200); // Имеет два необязательных параметра: ширину и высоту:
-img.src = 'picture.jpg';
-console.log(img);
+    var img = new Image(100, 200); // Имеет два необязательных параметра: ширину и высоту:
+    img.src = 'picture.jpg';
+    console.log(img);
 
 // <img width="100" height="200" src="picture.jpg">
 
 
 // ПРИМЕР
-var pictures = [];
-for (var i = 0; i < 3; i++) {
-    pictures[i] = new Image()
-    if (i == 0) pictures[i].src = "/pictures/it/javascript/3.gif"
-    if (i == 1) pictures[i].src = "/pictures/it/javascript/2.gif"
-    if (i == 2) pictures[i].src = "/pictures/it/javascript/1.gif"
-}
-var n = 0;
-
-function scroll_image() {
-    document.images[0].src = pictures[n].src;
-    n++;
-    if (n == 3) {
-        n = 0;
+    var pictures = [];
+    for (var i = 0; i < 3; i++) {
+        pictures[i] = new Image()
+        if (i == 0) pictures[i].src = "/pictures/it/javascript/3.gif"
+        if (i == 1) pictures[i].src = "/pictures/it/javascript/2.gif"
+        if (i == 2) pictures[i].src = "/pictures/it/javascript/1.gif"
     }
-}
+    var n = 0;
 
-setInterval(scroll_image, 1500);
+    function scroll_image() {
+        document.images[0].src = pictures[n].src;
+        n++;
+        if (n == 3) {
+            n = 0;
+        }
+    }
+    setInterval(scroll_image, 1500);
 

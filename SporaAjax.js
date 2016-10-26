@@ -38,7 +38,7 @@ $(document).ready(function () {
 
     //(*!!!)
  // данные можно с помощью get отправить на секрвер для этого есть второй не обязательнй параметр data
-    $.get(url,[data],[callback])
+    $.get(url,data,callback)
                                         ///////пример/////
 
     var requestData = { // вот объект который будет отправлен на сервер
@@ -54,7 +54,7 @@ $(document).ready(function () {
         e.preventDefault();
     })
     // Запрос имеет примерно следующий вид:
-        localhost/web/jquery/mydata.json?country=RU&city=Moscow
+     //   localhost/web/jquery/mydata.json?country=RU&city=Moscow
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -422,6 +422,61 @@ $(document).ready(function () {
         $("#buttonDiv, #totalDiv").remove();
         $("#totalTmpl").template(data).appendTo("body");
     }
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    .serialize() //Преобразование элементов формы в строку данных для отправки через Ajax запрос.
+    ///////пример/////
+
+    $("button").click(function (e) {
+        var formData = $("form").serialize();
+        $.post("http://127.0.0.1:80/",
+            formData, processServerResponse);
+        e.preventDefault();
+    });
+    // Для введенных мною значений метод serialize() генерирует следующую строку:
+    //   astor=12&daffodil=20&rose=0&peony=0&primula=0&snowdrop=6
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    $.parseJSON() // Конвертирует строку с json-данными в javascript-объект(в массив).
+    dataFilter    // будет запускаться после поллучения данных, данные проработаются  в функции    dataFilter
+                  // только потом идут в success
+                  // такой своеобразный фильтр
+
+    ///////пример/////
+    $.ajax({
+        url: 'mydata.json',
+        success: function(data) {
+            var template = $('#flowerTmpl');
+            template.tmpl(data.slice(0, 3)).appendTo("#row1");
+            template.tmpl(data.slice(3)).appendTo("#row2");
+        },
+        dataType: "json",
+        dataFilter: function(data, dataType) {  // вот данные полученны
+            if (dataType == "json") {
+                var filteredData = $.parseJSON(data);  // здесь они преобразуються в массив
+                filteredData.shift();                  // тут удаляется первый элемент
+                return JSON.stringify(filteredData.reverse()); // тут массив переваричивается кверх ногами и преобразуется в объект JSON
+            } else {
+                return data;
+            }
+        }
+    })
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                                             //Итого
+    JSON.stringify() //конвертирует масив в объект JSON
+    serializeArray() //упорядывает так данные form, чтобы они превратьились в массив и вдальнейшем были преобразованные в
+                    //объект JSON с помощью JSON.stringify()
+    $.parseJSON() //конвертирует из объекта JSON в массив объектов
+    JSON.parse() //из строки в объект JSON
+                    var data = '{ "age": 30 }';
+                    var user = JSON.parse(data);
+    .serialize() //Преобразование элементов формы в строку данных для отправки через Ajax запрос.
+    //нен забывать ставить name='sdsd" в input
+    // Для введенных мною значений метод serialize() генерирует следующую строку:
+    //   astor=12&daffodil=20&rose=0&peony=0&primula=0&snowdrop=6
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     async // Создание синхронных запросов. Значение true - в асинхронном режиме.
@@ -512,6 +567,10 @@ $(document).ready(function () {
             }
         }
     })
+
+        // В джава скрипт есть JSON.parse который делает из строки объект JSON
+    var data = '{ "age": 30 }';
+    var user = JSON.parse(data);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     converters // служит для конвертации полученных данных

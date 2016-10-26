@@ -1,0 +1,116 @@
+{ resolve: 
+   { [Function]
+     [length]: [33m0[39m,
+     [name]: [32m''[39m,
+     [prototype]: { [constructor]: [36m[Circular][39m } },
+  normalize: 
+   { [Function]
+     [length]: [33m1[39m,
+     [name]: [32m''[39m,
+     [prototype]: { [constructor]: [36m[Circular][39m } },
+  isAbsolute: 
+   { [Function]
+     [length]: [33m1[39m,
+     [name]: [32m''[39m,
+     [prototype]: { [constructor]: [36m[Circular][39m } },
+  join: 
+   { [Function]
+     [length]: [33m0[39m,
+     [name]: [32m''[39m,
+     [prototype]: { [constructor]: [36m[Circular][39m } },
+  relative: 
+   { [Function]
+     [length]: [33m2[39m,
+     [name]: [32m''[39m,
+     [prototype]: { [constructor]: [36m[Circular][39m } },
+  _makeLong: 
+   { [Function]
+     [length]: [33m1[39m,
+     [name]: [32m''[39m,
+     [prototype]: { [constructor]: [36m[Circular][39m } },
+  dirname: 
+   { [Function]
+     [length]: [33m1[39m,
+     [name]: [32m''[39m,
+     [prototype]: { [constructor]: [36m[Circular][39m } },
+  basename: 
+   { [Function]
+     [length]: [33m2[39m,
+     [name]: [32m''[39m,
+     [prototype]: { [constructor]: [36m[Circular][39m } },
+  extname: 
+   { [Function]
+     [length]: [33m1[39m,
+     [name]: [32m''[39m,
+     [prototype]: { [constructor]: [36m[Circular][39m } },
+  format: 
+   { [Function]
+     [length]: [33m1[39m,
+     [name]: [32m''[39m,
+     [prototype]: { [constructor]: [36m[Circular][39m } },
+  parse: 
+   { [Function]
+     [length]: [33m1[39m,
+     [name]: [32m''[39m,
+     [prototype]: { [constructor]: [36m[Circular][39m } },
+  sep: [32m'\\'[39m,
+  delimiter: [32m';'[39m,
+  posix: 
+   { resolve: 
+      { [Function]
+        [length]: [33m0[39m,
+        [name]: [32m''[39m,
+        [prototype]: { [constructor]: [36m[Circular][39m } },
+     normalize: 
+      { [Function]
+        [length]: [33m1[39m,
+        [name]: [32m''[39m,
+        [prototype]: { [constructor]: [36m[Circular][39m } },
+     isAbsolute: 
+      { [Function]
+        [length]: [33m1[39m,
+        [name]: [32m''[39m,
+        [prototype]: { [constructor]: [36m[Circular][39m } },
+     join: 
+      { [Function]
+        [length]: [33m0[39m,
+        [name]: [32m''[39m,
+        [prototype]: { [constructor]: [36m[Circular][39m } },
+     relative: 
+      { [Function]
+        [length]: [33m2[39m,
+        [name]: [32m''[39m,
+        [prototype]: { [constructor]: [36m[Circular][39m } },
+     _makeLong: 
+      { [Function]
+        [length]: [33m1[39m,
+        [name]: [32m''[39m,
+        [prototype]: { [constructor]: [36m[Circular][39m } },
+     dirname: 
+      { [Function]
+        [length]: [33m1[39m,
+        [name]: [32m''[39m,
+        [prototype]: { [constructor]: [36m[Circular][39m } },
+     basename: 
+      { [Function]
+        [length]: [33m2[39m,
+        [name]: [32m''[39m,
+        [prototype]: { [constructor]: [36m[Circular][39m } },
+     extname: 
+      { [Function]
+        [length]: [33m1[39m,
+        [name]: [32m''[39m,
+        [prototype]: { [constructor]: [36m[Circular][39m } },
+     format: 
+      { [Function]
+        [length]: [33m1[39m,
+        [name]: [32m''[39m,
+        [prototype]: { [constructor]: [36m[Circular][39m } },
+     parse: 
+      { [Function]
+        [length]: [33m1[39m,
+        [name]: [32m''[39m,
+        [prototype]: { [constructor]: [36m[Circular][39m } },
+     sep: [32m'/'[39m,
+     delimiter: [32m':'[39m },
+  win32: [36m[Circular][39m }

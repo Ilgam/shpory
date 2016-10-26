@@ -1,0 +1,152 @@
+Node.js // работает через консоль нет графического оболочки
+        // устанавливается на сайте
+        // Node -v версия ноды
+node // REPL Contr C дважды выход из REPL
+//подсоединеие своих модулей
+chat = require('./chat')
+// в chat.js мы используем exports
+exports.sub = function(req,res){
+    client.push(res)
+}
+
+//\\\\\\\\\\\\\\\ядро node состоит из глобальных объектоа global process Buffer////\\\\\\\\\\\\\\\\\\\\
+
+//////////////////////////global////////////////////////////
+//Здесь все глобальные объекты здесть есть и process и  Buffer также
+//нпример clearImmediate: [Function],
+//    clearInterval: [Function],
+//    clearTimeout: [Function],
+//    setImmediate: [Function],
+//    setInterval: [Function],
+//    setTimeout: [Function],
+
+// глобальные переменные глобальным только в файле
+// при желании их можно сделать глобальными global.x = 10 но этого делать не нужно
+
+//__filename - определит  или работать с файлом в котором вы раболтаете
+            //например
+            console.log(__filename);
+            // /Users/mjr/example.js
+__dirname //- определит  или работать с директорией в котором вы раболтаете
+            //прример
+            console.log(__dirname);
+            // /Users/mjr
+
+//////////////////process////////////////////////
+
+// В нем есть множемтво свойств их посмотреть можно console.log(process)
+// В книги также указано что process отвечает за оболочки стандартных потоков ввода и вывода
+// а также за преобразование функции из синхронных в асинхронных обратного вызова
+
+process.env// свойство оболочки файла там будет указно все что связанно с файлом
+// посомтреть можно console.log(process.env)
+            //Например
+            console.log(process.env.COMPUTERNAME) // - выведет имя компьютера где запустился фаил
+
+process.argv //- массив переданнхз аргументов
+// если посмотреть тиам уже будет два значения пути к файлом соотвественно
+// если мы еще что нибудь передадим, например node practick.js pal то
+// там уже будут тр занчения - 2 пути к файлам и pal
+console.log(process.argv)
+            //пример
+            process.argv.forEach(function (val, index, array) {
+                console.log(index + ': ' + val);
+            });
+
+process.cwd() //- точная диретори ягде выполняется  процеес
+            //пример
+            console.log('Current directory: ' + process.cwd());
+process.chdir //- изменить рабочую директорию
+            //пример
+            console.log('Starting directory: ' + process.cwd());
+            try {
+                process.chdir('/tmp');
+                console.log('New directory: ' + process.cwd());
+            }
+            catch (err) {
+                console.log('chdir: ' + err);
+            }
+process.execPath // Путь выпонения для нод приложения console.log(process.execPath)
+            //пример
+            console.log(process.execPath )
+process.version // Версия ноде console.log(process.version
+            // пример
+            console.log(process.version)
+process.versions // более полная версия
+            //пример
+            console.log(process.versions)
+            // результат
+            // { http_parser: '2.5.0',
+            //     node: '4.0.0',
+            //     v8: '4.5.103.30',
+            //     uv: '1.7.3',
+            //     zlib: '1.2.8',
+            //     ares: '1.10.1-DEV',
+            //     modules: '46',
+            //     openssl: '1.0.2d' }
+process.platform // платформа сервера console.log(process.platform)
+            // пример
+            console.log(process.platform)
+process.memoryUsage() // изнать о памяти работает вместе с млдулем util
+            //пример
+            var util = require('util');
+            console.log(util.inspect(process.memoryUsage()));
+process.nextTick // важная херня не понял для чего
+            //пример
+            process.nextTick(function () {
+                console.log('nextTick callback');
+            });
+////////////отвечает за оболочки стандартных потоков ввода и вывода  их можно найти в console.log(process)
+
+stdout: [Getter]// поток ввывода  (асинхронный)
+stderr: [Getter] // синхронным (блокирующим)(видимо служит для ошибки)
+stdin: [Getter]// поток ввода (асинхронный)
+            /////////пример
+            process.stdin.resume() //- поумолчанию поток stdin приостановлен поэтому resume() это значит
+                                   // возобновить поток
+            process.stdin.on('data', function(e){ // вешаем обработчикк событий 'data' то есть данные, в е
+                // будут ввыеденные через  stdin данные
+                process.stdout.write('data' + e) //в функции обратного вызова пишем write() это начит ввывести
+            })
+
+///////////////////Buffer///////////////////////////////////
+
+//Все данные передаются в виде буфера двоичные исчесления По сути масиив байтов
+// таблица данных Юникод http://unicode-table.com/ru/#control-character
+var buf = new Buffer(strring) //создание нового буфера(фторым параметром можно поставить кадировку
+//она может быть и utf8 b base64 ascii и тд) , по умолчанию кадировка utf8
+
+var buf = new Buffer('Все счатливые семьи одинаковы','utf-8');
+[].slice.call(buf) //переделать в массив
+            //пример
+            var buf = new Buffer('Все счатливые семьи одинаковы','utf-8');
+            var prop = [].slice.call(buf)
+            console.log(prop)
+            buf.write(string)// записать строку в существующий буфер, по умолчанию кадировка utf8
+//существуют разные настройки
+buffer.write(string, offset=0, length=buffer.length-offset, encoding='utf8')
+            //пример
+            buf = new Buffer(256);
+            len = buf.write('\u00bd + \u00bc = \u00be');
+            console.log(len + " bytes: " + buf.toString('utf8', 0, len));
+
+buffer.toString(encoding, start=0, end=buffer.length) // переделывает в строку от star до end
+            //пример
+            buf = new Buffer(256);
+            len = buf.write('\u00bd + \u00bc = \u00be');
+            console.log(len + " bytes: " + buf.toString('utf8', 0, len));
+
+Buffer.byteLength // длина буфера  в байтах
+            //пример
+            str = '\u00bd + \u00bc = \u00be';
+            console.log(str + ": " + str.length + " characters, " +
+                Buffer.byteLength(str, 'utf8') + " bytes");
+            // ? + ? = ?: 9 characters, 12 bytes
+buffer.length    // длина буфера
+            //пример
+            buf = new Buffer(1234);
+            console.log(buf.length);
+            buf.write("some string", "ascii", 0);
+            console.log(buf.length);
+            // 1234
+            // 1234

@@ -1,0 +1,43 @@
+<!--Не забываем в input приписывать name, чтобы можно было создать объект джйсон, в этой реализациии конечно он не нужен-->
+<!--однако когда отправляется форма , то прописывтьь  нужно-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+    <script src="jquery-2.0.2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#ButtonSent').on('click', function(e) {
+                e.preventDefault();
+
+                $.post('http://127.0.0.1:80/', JSON.stringify({mssage: $('#input_Text').val()}), function () {
+                })
+                $('#input_Text').val(0)
+            })
+                subscrab()
+                function subscrab(){                              // инициируется функция
+                    $.get('http://127.0.0.1:80/', function(data){ // отправляется гет запрос, ждем ответ, как токо ответ получен
+//                                                                // делается запись а потом опять вызывается  subscrab();, чтобы опять
+                                                                  // ожидать ответ вот поэтому нужны как пост так и гет запрос
+                        console.log(data)
+                        $('<li></li>').text(data).appendTo($('#answer'))
+                        subscrab();
+                    })
+                }
+
+
+        });
+    </script>
+</head>
+<body>
+<h1>Jacqui's Flower Shop</h1>
+<form  method="post">
+    <input id="input_Text" name="masseg"  value="0" required/>
+    <button  id = "ButtonSent" type="submit">Place Order</button>
+</form>
+<ul id="answer"></ul>
+</body>
+
+
+
+</html>
