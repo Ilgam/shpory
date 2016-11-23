@@ -163,6 +163,13 @@ function logArrayElements(element, index, array) {
 // a[1] = 5
 // a[3] = 9
 
+map() //создаёт новый массив с результатом вызова указанной функции для каждого элемента массива.
+var numbers = [1, 4, 9];
+var doubles = numbers.map(function(num) {
+    return num * 2;
+});
+// теперь doubles равен [2, 8, 18], а numbers всё ещё равен [1, 4, 9]
+
 split() //разбивает объект String на массив строк путём разделения строки указанной подстрокой.
 var data = ('London is a capitol of GB').split(' ');
 console.log(data)
@@ -248,6 +255,19 @@ o.prop = 'существует';
 o.hasOwnProperty('prop'); // Возвращает логическое значение, указывающее,
                           // содержит ли объект указанное свойство,
                           // в этом примере возвратиться true
+ var copy = Object.assign({}, obj)//используется для копирования значений всех собственных перечисляемых
+                                  //свойств из одного или более исходных объектов в целевой объект.
+var obj = { a: 1 };
+var copy = Object.assign({}, obj);
+console.log(copy); // { a: 1 }
+
+
+var o1 = { a: 1 };
+var o2 = { b: 2 };
+var o3 = { c: 3 };
+var obj = Object.assign(o1, o2, o3);
+console.log(obj); // { a: 1, b: 2, c: 3 }
+console.log(o1);  // { a: 1, b: 2, c: 3 }, изменился и сам целевой объект.
 
 //////////////////////////Конструктор Объектов ///////////////////////////////
 // Пример 1

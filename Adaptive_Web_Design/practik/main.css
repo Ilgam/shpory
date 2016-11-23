@@ -1,0 +1,55 @@
+
+.cont {
+    width: 90%; /*1476*/
+    margin: 0 auto;
+    display: block;
+    overflow:hidden;
+    margin: 0 auto;
+
+
+}
+
+.col {
+   width:  32.92682926829268%; /* 486*/
+    margin:  0.0625em; /*0.0625*/
+    float: left;
+    background: #b8860b;
+
+}
+
+
+
+@media (max-width: 320px) {
+    .col {
+        width: 99.375%;
+    }
+}
+@media (min-width: 321px) and (max-width: 480px) and (orientation: portrait) {
+    .col {
+        width: 49%;
+
+
+
+    }
+
+}
+@media (min-width: 481px) and (max-width: 768px) and (orientation: portrait) {
+    .col {
+        width: 49%;
+
+
+
+    }
+
+}
+/* iPads (вертикальная) ----------- */
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+    .col {
+        background: #767676;
+
+
+
+    }
+}
+
+/*https://habrahabr.ru/post/189726/*/

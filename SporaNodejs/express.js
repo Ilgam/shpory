@@ -540,7 +540,7 @@ app.use(function(err, req, res, next) {
 //    пример
 app.use(express.static('public'));
 
-или
+//или
 
 var options = {
     dotfiles: 'ignore',
@@ -575,6 +575,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var expressLess = require('express-less');
 // uncomment after placing your favicon in /public   //тищет фаил иконку, еслиее нет то передае дальше
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));  // выводит запись что за запрос пришел get post и т д dev - это формаь логирования
@@ -598,6 +599,9 @@ app.use(cookieParser());// разбирает заголовок cookie, и днлает соответствующее 
 //здесь можно указать необязательный ключ, которым куки будут подписываться например  app.use(cookieParser('key'));
 
 app.use(express.static(path.join(__dirname, 'public')));// если запрос не был обработан то подключится статика
+
+app.use('/stylesheets', expressLess(__dirname + '/public/stylesheets/common', { compress: true })); // подключения less
+
 
 ////////////////////////////////Использование шаблонизаторов в Express///////////////////////////////////////////////
 
