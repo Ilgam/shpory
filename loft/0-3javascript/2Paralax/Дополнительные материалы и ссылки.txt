@@ -1,5 +1,0 @@
-30 Great Websites with Parallax - http://www.awwwards.com/30-great-websites-with-parallax-scrolling.html
-Simple Parallax Scrolling - http://pixelcog.github.io/parallax.js/
-Пример кода вебинара #2 - https://github.com/Severenit/webadvanced062016/tree/master/02%20-%20parallax
-
-http://keithclark.co.uk/articles/pure-css-parallax-websites/ как делать кроссбраузность

@@ -1,3 +1,0 @@
-Статья Fallback-действия в ES6 Promise - https://habrahabr.ru/post/276913/
-https://seoxa.net/
-Открытый вебинар по javascript - [J]u[S]t prototype this! - https://www.youtube.com/watch?v=5l01s6Vkqp0

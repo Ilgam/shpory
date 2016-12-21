@@ -1,5 +1,0 @@
-Примеры кода - https://jsfiddle.net/2mL4j02n/1/embedded/result/#Result
-Кроссбраузерный inline-block - https://habrahabr.ru/post/117109/
-Space between inline-block - https://css-tricks.com/fighting-the-space-between-inline-block-elements/
-Clearing floats - https://www.sitepoint.com/clearing-floats-overview-different-clearfix-methods/
-Micro clearfix hack - http://nicolasgallagher.com/micro-clearfix-hack/
