@@ -1,0 +1,187 @@
+
+/* --------- menu --------- */
+
+.nav__list {
+	height: 50px;
+	text-align: justify;
+
+	&:after {
+		content: "";
+		width: 100%;
+		height: 0px;
+		display: inline-block;
+	}
+}
+
+/* --------- dropdown --------- */
+
+.nav {
+	height: 50px;
+	background: #cccccc;
+	position: relative;
+
+	&.active {
+		.dropdown {
+			left: 0;
+			right: 0;
+			opacity: 1;
+		}
+	}
+}
+
+.nav__list {
+	text-align: justify;
+
+	&:after {
+		content: "";
+		width: 100%;
+		height: 0;
+		display: inline-block;
+	}
+}
+
+
+.nav__item {
+	@include inlineblock;
+	position: relative;
+	padding: 0 10px;
+
+	&:hover {
+		.nav__item-link {
+			color: red;
+			text-decoration: none;
+		}
+
+		.nav__popup {
+			left: -45px;
+			opacity: 1;
+		}
+	}
+}
+
+.nav__popup {
+	position: absolute;
+	top: 35px;
+	@include transition(opacity .6s);
+	opacity: 1;
+	z-index: 1000;
+	left: -9999px;
+	opacity: 0;
+}
+
+
+.dropdown {
+	background: #fff;
+	border: 1px solid #000;
+	top: 110%;
+	position: absolute;
+	@include transition(opacity .3s);
+	display: block;
+	z-index: 1000;
+	left: -9999px;
+	right: auto;
+	opacity: 0;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 40px;
+		top: -25px;
+	}
+}
+
+/* --------- animation --------- */
+
+.line {
+	border: 2px solid #34495e;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.line__block {
+	background: #e74c3c;
+	height: 50px;
+	width: 100px;
+	border-radius: 5px;
+	position: relative;
+	left: 0;
+	transition: left 2s;
+
+}
+
+.line__btn {
+	margin-top: 50px;
+}
+
+.line__trigger {
+	color: #34495e;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/* --------- title --------- */
+
+.title {
+	font-family: "BERNIER Regular";
+	color: #455a64;
+	font-size: 40px;
+}
+
+.letter-span {
+	opacity: 0;
+	display: inline-block;
+
+	&.active {
+		opacity: 1;
+		animation: bounceIn 1s;
+		-webkit-animation: bounceIn 1s;
+	}
+}
+
+
+.animate {
+	opacity: 0;
+	position: relative;
+}
+
+.toTop {
+	animation: toTop 2s;
+	animation-fill-mode: forwards;
+}
+
+.toRight {
+	animation: toRight 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes toTop {
+	from {
+		opacity: 0;
+		bottom: -200px;
+	}
+
+	to {
+		opacity: 1;
+		bottom: 0;
+	}
+}
+
+@keyframes toRight {
+	from {
+		opacity: 0;
+		left: -200px;
+	}
+
+	to {
+		opacity: 1;
+		left: 0;
+	}
+}

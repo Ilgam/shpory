@@ -1,0 +1,13 @@
+$red : #ff5252;
+
+// setups
+@import "_misc/fonts";
+@import "_misc/font-awesome";
+@import "_misc/mixins";
+@import "_misc/adjustment";
+
+// blocks
+@import "blocks/**/*.scss";
+//@import "unstyled/page.scss";
+@import "unstyled/blank.scss";
+

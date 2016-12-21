@@ -1,0 +1,41 @@
+.footer {
+	background: $black;
+}
+
+.socials__link {
+	width: 32px;
+	height: 31px;
+	display: block;
+	background: url('/img/icon/socials.png') 0 0 no-repeat;
+
+	&.socials__link_fb {
+		background-position: 0 0;
+	}
+
+	&.socials__link_vk {
+		background-position: -100px 0;
+	}
+
+	&.socials__link_tw {
+		background-position: -200px 0;
+	}
+}
+
+.copyright {
+	font-size: 14px;
+	line-height: 16px;
+	color: #9c9c9c;
+	position: absolute;
+	left: 0;
+	top: 18px;
+}
+
+.socials__list {
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+
+.socials__item {
+	display: inline-block;
+}

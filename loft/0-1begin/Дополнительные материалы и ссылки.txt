@@ -1,0 +1,7 @@
+Основы теминала - https://www.youtube.com/playlist?list=PLY4rE9dstrJy5P2z0sr8K3Nzr7l_UAN2b
+Gulp.js - https://www.youtube.com/playlist?list=PLY4rE9dstrJwXCz1utct9b6Vub9VWQoKo
+
+Работа с browsersync - https://www.youtube.com/playlist?list=PLY4rE9dstrJxchfQOLIN2peO-G6_zNjD4
+Работа с Git - https://www.youtube.com/playlist?list=PLY4rE9dstrJyTdVJpv7FibSaXB4BHPInb
+
+Учебная сборка Gulp - https://github.com/panban/ls-builder

@@ -1,0 +1,55 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	min-width: 600px;
+}
+
+.text-block {
+	@extend %clearfix;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid black;
+}
+
+.text-block__left {
+	float: left;
+	width: 50%;
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+}
+
+.text-block__right {
+	float: left;
+	width: 47%;
+	margin-left: 3%;
+}
+
+.gallery__list {
+	@extend %clearfix;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.gallery__item {
+	float: left;
+	width: 25%;
+	margin-bottom: 10px;
+}
+
+.gallery__item-inner {
+	padding: 0 10px;
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+}

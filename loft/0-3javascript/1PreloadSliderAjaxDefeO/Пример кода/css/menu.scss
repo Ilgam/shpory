@@ -1,0 +1,86 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.clearfix {
+	&:after, &:before {
+		content: "";
+		display: block;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.header {
+	height: 200px;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	@extend .clearfix;
+	height: 1500px;
+}
+
+.left__col {
+	width: 30%;
+	float: left;
+	height: 1px;
+
+}
+
+.right__col {
+	width: 70%;
+	float: left;
+
+	img {
+		display: block;
+		max-width: 100%;
+	}
+}
+
+.menu {
+	padding-right: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.menu__link {
+	padding: 10px;
+	background: #bdc3c7;
+	display: block;
+	text-align: right;
+	color: #ecf0f1;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.menu__item {
+	border-bottom: 2px solid #1abc9c;
+	margin-bottom: 20px;
+}
+
+.menu__wrapper {
+	position: relative;
+	height: 1px;
+}
+
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}

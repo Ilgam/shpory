@@ -1,0 +1,43 @@
+@import "../_misc/mixins";
+
+html {
+	font-size: 10px;
+}
+
+.wrapper {
+	width: 900px;
+	//border: 1px solid black;
+	@extend %clearfix;
+	font-size: 10px;
+}
+
+.block {
+	height: 400px;
+	background: red;
+	width: 50vmin;
+}
+
+.text-block {
+	float: left;
+	width: 50%;
+}
+
+.block-wrapper {
+	float: left;
+	width: 50%;
+}
+
+.text {
+	font-size: 2rem;
+}
+
+.wrap {
+	width: 75px;
+	height: 75px;
+	background: url("/img/content/ava-150.png") center center no-repeat;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5),
+screen and (min-resolution: 144dpi) {
+	// стили для экранов повышенного разрешения
+}

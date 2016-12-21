@@ -1,0 +1,6 @@
+.idea/
+node_modules/
+dest
+symbol_sprite.html
+css/
+svg/

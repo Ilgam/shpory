@@ -1,0 +1,39 @@
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 16px; }
+
+  .container {
+    width: 970px; } }
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 15px; }
+
+  .container {
+    width: 750px; }
+
+  .stuff {
+    width: rem(500px); }
+
+  .about__left {
+    width: rem(172px); }
+
+  .about__right {
+    width: rem(290px); }
+
+  .about__pic-item {
+    max-width: rem(130px);
+    max-height: rem(130px); } }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px; }
+
+  .container {
+    width: 480px; } }
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 12px; }
+
+  .container {
+    width: auto; } }
+
+/*# sourceMappingURL=media.css.map */

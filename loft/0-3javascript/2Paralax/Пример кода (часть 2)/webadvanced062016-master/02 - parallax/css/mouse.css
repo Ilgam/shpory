@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #FEDCC8;
+}
+
+.parallax {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer {
+  position: absolute;
+  width: 3000px;
+  height: 100%;
+  left: 50%;
+  margin-left: -1500px;
+  bottom: 0%;
+}
+
+.parallax__layer img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}

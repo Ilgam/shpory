@@ -1,0 +1,6 @@
+mixin vendor (type, path)
+    if type == 'style'
+        link(rel="stylesheet" href="../../bower/#{path}")
+
+    if type == 'script'
+        script(src="../../bower/#{path}")

@@ -1,0 +1,23 @@
+{
+  "name": "_jadeplate",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "vladimir sabantsev <testicola@yandex.ru>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.2.0",
+    "jquery": "^3.0.0"
+  }
+}

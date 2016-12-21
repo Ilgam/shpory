@@ -1,0 +1,67 @@
+mixin divider(text)
+    .divider
+        .divider__text= text
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content="IE=edge,chrome=1")
+        meta(name='viewport' content='width=device-width')
+        title Tricks
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css")
+        link(rel="stylesheet" href="css/main.css")
+    body
+        .wrapper
+            .container
+                +divider('выпадашки')
+
+
+                nav.nav
+                    ul.nav__list
+                        - for (var i = 0; i < 5; i++)
+                            li.nav__item
+                                a.nav__item-link(href='#')
+                                    | Nav#{i}
+
+                                if i == 3
+                                    //.nav__popup
+                                    //    ul.nav__popup-list
+                                    //        - for (var i = 0; i < 5; i++)
+                                    //            li.nav__popup-item
+                                    //                a.nav__popup-link(href='#')
+                                    //                    | popup_link#{i}
+                    .dropdown
+                        ul.dropdown__list
+                            - for (var i = 0; i < 15; i++)
+                                li.dropdown__item
+                                    a.dropdown__link(href='#') dropdown link #{i}
+
+                +divider('Очередь анимаций')
+
+                .line
+                    .line__block
+                .line__btn
+                    a(href="#").line__trigger Запустить
+
+                +divider('буквы')
+
+                .title Текст для анимации
+                .start-wrapper
+                    a(href="#").start Старт анимации
+
+                +divider('рекурсия')
+
+                .blocks
+                    ul.blocks__list
+                        - for (var i = 0; i < 40; i++)
+                            li.blocks__item
+                                a.blocks__link(href='#')
+
+
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")
+        script(src="js/main.js")
+
+
+        script(src="js/title.js")
+        script(src="js/wow.js")

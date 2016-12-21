@@ -1,0 +1,87 @@
+@media screen and (max-width: 1200px) { //hd
+	html {
+		font-size: 16px;
+	}
+
+	.container {
+		width: 970px;
+	}
+
+}
+
+@media screen and (max-width: 992px) { //laptop
+	html {
+		font-size: 15px;
+	}
+
+	.container {
+		width: 750px;
+	}
+
+	.stuff {
+		width: rem(500px);
+	}
+
+	.about__left {
+		width: rem(172px);
+	}
+
+	.about__right {
+		width: rem(290px);
+	}
+
+	.about__pic-item {
+		max-width: rem(130px);
+		max-height: rem(130px);
+	}
+}
+
+@media screen and (max-width: 768px) { //tablets
+	html {
+		font-size: 14px;
+	}
+
+	.container {
+		width: 480px;
+	}
+}
+
+@media screen and (max-width: 480px) { //phones
+	html {
+		font-size: 12px;
+	}
+
+	.container {
+		width: auto;
+	}
+}
+
+//@media screen and (min-width: 10px) { //phones
+//	body {
+//		background: orange;
+//	}
+//}
+//
+//@media screen and (min-width: 480px) { //phones
+//	body {
+//		background: yellow;
+//	}
+//}
+//
+//@media screen and (min-width: 768px) { //tablets
+//	body {
+//		background: green;
+//	}
+//}
+//
+//@media screen and (min-width: 992px) { //laptop
+//	body {
+//		background: red;
+//	}
+//}
+//
+//@media screen and (min-width: 1200px) { //hd
+//	body {
+//		background: black;
+//	}
+// }
