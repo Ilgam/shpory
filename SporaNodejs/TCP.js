@@ -4,7 +4,7 @@
 var  net = require("net");
 var server = net.createServer(function(socket){ // функция будет вызываться для каждого нового соеденения
     console.log(socket.remoteAddress + " " + socket.remoteFamily + " " + socket.remotePort)
-    socket.on("data", function(){
+    socket.on("data", function(data){
         socket.write(data)
     })
     socket.on("close", function(){ // если удаленное соеденнение закроется мы регистрируем это событие

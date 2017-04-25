@@ -661,6 +661,10 @@ outline: none;
 </style>
 
   <input type="checkbox" id="sem"/><label for="sem"><button>описание</button></label>
+
+
+
+
 \\\\\\\\\\\\\\\\\\\\\
   <style>
 .Green {
@@ -697,6 +701,35 @@ outline: none;
 <div class="Green1"></div>
 
 
+///////////////////////
+<div class="checkbox">
+<input type="checkbox" id="check"><label for="check">¬ыбери мен€</label>
+</div>
+
+.checkbox {
+	position:relative;
+	padding-left:25px;
+}
+.checkbox input[type=checkbox] {
+	display:none;
+}
+.checkbox label:after {
+	content:'';
+	display:block;
+	height:14px;
+	width:14px;
+	outline:1px solid #939598;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.checkbox input[type=checkbox]:checked + label:after {
+	outline:1px solid #939598;
+	border:2px solid #fff;
+	width:10px;
+	height:10px;
+	background-color:#63849F;
+}
 //////////////////////////////////////√оризонтальное центрирование/////////////////////////////////////////////////
 
 ///////////////////////////////////// Ёто текст
@@ -780,7 +813,7 @@ outline: none;
   top: 50%;
   left: 50%;
 
-  margin: -70px 0 0 -170px;
+  margin: -50px 0 0 -150px;
 }
 
 
@@ -798,13 +831,35 @@ outline: none;
 
 ///////////////////////////////// flexbox
 
+//////////////////////////////////////////////////////////горизонтальное меню
 .parent {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+1. li {display: inline;}
 
+Home Work About Blog Contact
+2. li {float: left;}
+
+Home
+Work
+About
+Blog
+Contact
+3. li {display: inline-block;}
+
+Home
+
+Work
+
+About
+
+Blog
+
+Contact
+4. ul {display: flex;}
 
 
 

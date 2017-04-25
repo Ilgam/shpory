@@ -73,6 +73,9 @@ Math.ceil(.95);   // 1
 Math.ceil(4);     // 4
 Math.ceil(7.004); // 8
 
+
+
+
 /////////////////////////////Строки///////////////////////////////////////
 
 // Строки зачастую выступают ввиде массивов
@@ -165,8 +168,8 @@ function logArrayElements(element, index, array) {
 
 map() //создаёт новый массив с результатом вызова указанной функции для каждого элемента массива.
 var numbers = [1, 4, 9];
-var doubles = numbers.map(function(num) {
-    return num * 2;
+var doubles = numbers.map(function(index,elem) {
+    return elem * 2;
 });
 // теперь doubles равен [2, 8, 18], а numbers всё ещё равен [1, 4, 9]
 
@@ -1472,3 +1475,21 @@ img.height = 100;
     }
     setInterval(scroll_image, 1500);
 
+////////////////////////Написание своих библиотек на JavaScript/////////////////////////
+
+(function(window, undefined) {
+    'use strict';               // Включаем строгий режим
+    var myPlugin = {};
+        // Наш код
+
+    // Обеспечение совместимости
+        var oldGlobalVar = window.myPlugin;
+    myPlugin.noConflict = function () {
+        if (window.myPlugin === myPlugin) {
+            window.myPlugin = oldGlobalVar;
+        }
+        return myPlugin;
+    };
+        // Объявление глобальной переменной
+    window.myPlugin = myPlugin;
+})(window);

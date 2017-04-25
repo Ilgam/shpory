@@ -42,7 +42,7 @@ const pokre =[ 'name', 'weight']
 app.get('/', async (req, res)=> {
     try {
         const vop = await getPok(url1);
-        const pol = vop.map(n => {
+        const pol = vp.map(n => {
             return  getpocemon(n.url)
         })
 

@@ -1,0 +1,71 @@
+#GoodAlertConteiner{
+    position: fixed; top: 0; left : 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 9999;
+}
+
+
+#GoodAlertConteiner *{
+    font-family: Arial;  
+    padding: 0;
+    margin: 0;  
+   text-align: left;
+}
+#GoodAlertInnerWrap{
+    
+}
+#GoodAlert{
+    position: fixed; top: 50%; left: 50%;
+    margin-left: -200px;
+    margin-top: -100px;
+    width: 400px; 
+    min-height: 100px;
+    z-index: 1000;
+    
+    
+}
+#GoodAlertInner{
+    padding: 15px 15px 30px 15px;
+    background: #fff url(images/bg.png);
+    position: relative;
+    border: solid 1px #ccc;
+}
+#GoodAlertButton{
+
+    position: absolute;
+    right: 10px; bottom: 10px;
+    padding: 0 25px 3px 25px;
+    background: #f1f1f1; 
+    background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); 
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); 
+    background: -ms-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); 
+    background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); 
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #111;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px #fff;
+    border-width: 1px;
+    display: block;
+    height: 24px;
+}
+
+/*html[xmlns*=""] #GoodAlertButton{height:url(images/overlayer.png)\9;]background:default} /* IE8 */
+
+#GoodAlertMessage{
+    color: #222;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px #fff;
+    background: url(images/icon2.png) no-repeat;
+    padding-left: 40px;
+    padding-top: 5px;
+    min-height: 32px;
+    
+    line-height: 120%; 
+    margin-bottom: 20px;    
+}

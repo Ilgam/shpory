@@ -885,6 +885,7 @@ req.flash('info', 'email delivery to _%s_ from _%s_ failed.', toUser, fromUser);
         // => 123
         res.header('Content-Length');
         // => 123
+
         res.charset
 
 //”станавливает кодировку следующих заголовков Content-Type. Ќапример, res.send() и res.render() по умолчанию будут

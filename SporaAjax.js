@@ -470,9 +470,12 @@ $(document).ready(function () {
     serializeArray() //упорядывает так данные form, чтобы они превратьились в массив и вдальнейшем были преобразованные в
                     //объект JSON с помощью JSON.stringify()
     $.parseJSON() //конвертирует из объекта JSON в массив объектов
-    JSON.parse() //из строки в объект JSON
+                    var obj = jQuery.parseJSON('{"name":"John"}');
+                    alert(obj.name); // будет выведено "John"
+    JSON.parse() //из объект JSON d  строки
                     var data = '{ "age": 30 }';
                     var user = JSON.parse(data);
+                   // user = 30
     .serialize() //Преобразование элементов формы в строку данных для отправки через Ajax запрос.
     //нен забывать ставить name='sdsd" в input
     // Для введенных мною значений метод serialize() генерирует следующую строку:
