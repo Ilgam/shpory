@@ -3,8 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Adaptive_Web_Design/adap.css" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/Adaptive_Web_Design/bootstrap/worcflowMain/app/index.jade" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Dev/2.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Dev/2.js" charset="UTF-16" />
     <file url="file://$PROJECT_DIR$/Dev/2.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/Dev/3.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/Dev/3_1/Pet.js" charset="windows-1251" />
@@ -33,6 +31,7 @@
     <file url="file://$PROJECT_DIR$/SporaNodejs/http.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/SporaNodejs/socket.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/practickJquery+Ajax+Habdlebars/Listing 01.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/script.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/validationJQuery.js" charset="UTF-8" />
   </component>
 </project>

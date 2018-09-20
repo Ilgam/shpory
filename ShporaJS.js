@@ -2,6 +2,7 @@
 
 window.onload = function(){ // Загрузка страницы завершина
 }
+//'use strict'              // строгий джава
 /////////////////////Шаблон проектирования MVC/////////////////////////
 
 var vies = {};// - ПредставленияF
@@ -61,6 +62,17 @@ foo();              // Вызов функции
 //                      function foo(){
 //                                    function ggg(){};
 //
+//Именованные (FunctionDeclaration)
+//Именованные функции доступны везде в области видимости
+//function имя(параметры) {
+//...
+//}
+//Анонимные (FunctionExpression)
+//var имя = function(параметры) {
+//    …
+//}
+//
+//Анонимные - доступны только с момента объявления.
 
 
 //////////////////////Генератор случайных чисел///////////////////////////
@@ -220,7 +232,7 @@ do {
 
 ////////////////////////////////Цыкл in ///////////////////////////////////////
 
-Car = {
+var Car = {
     a: 'Zoom',
     b: 34,
     c: function () {
@@ -234,8 +246,8 @@ for(var prop in car){   // Переберают свойства объекта и последовательно
 }
 
 ///////////////////////////////Объекты///////////////////////////////////////
-
-Car = {
+// в отличии от простых типов данных ма переменной присваеваем ссылку на обьект ане сам обьект
+var Car = {
     a: 'Zoom',
     b: 34,
     c: function() {
@@ -272,7 +284,48 @@ var obj = Object.assign(o1, o2, o3);
 console.log(obj); // { a: 1, b: 2, c: 3 }
 console.log(o1);  // { a: 1, b: 2, c: 3 }, изменился и сам целевой объект.
 
-//////////////////////////Конструктор Объектов ///////////////////////////////
+
+//object.set() - устанавливает значение
+//object.get() - возвращает значение
+// сет и гет нужны для того чтобы можо устанавливать и возвращать значение сфойств обьектов
+// но в сет можно устанавливать условия поэтому лучше испотзовать сет и гет
+// пример работы с сет и гет
+var Car = {
+    name: "lada",
+    old: 5,
+    get age(){
+        return this.old
+    },
+    set age(value){     // тут value обязательно для сет
+        if(value < 0){
+            this.old = 0
+        } else if(value>18){
+            this.old = 18
+        } else{
+            this.old = value;
+        }
+    }
+}
+
+Car.age = -2;
+console.log(Car.age); //вернет 0
+Car.age = 20;
+console.log(Car.age);//вернет 18
+Car.age = 15;
+console.log(Car.age);//вернет 15
+
+///////////////////////////наследование основонное на прототипов и Object.create//////////////
+// в js есть только один тип наследования а имеено наследование от прототипов
+
+var obj1 = {
+    name: "Kevin"
+}
+
+var obj2 = Object.create(obj1); //obj2 наследует свойства  obj1
+
+console.log(obj2.name); //Kevin
+
+//////////////////////////Конструктор Объектов Прототипы и классы ///////////////////////////////
 // Пример 1
 function Dog(name, old) {
     this.name = name;
@@ -282,7 +335,10 @@ function Dog(name, old) {
     }
 }
   var Kevin = new Dog('Kevin','34'); // Получиться объект Kevin
-// Пример 2
+
+
+// Пример 2 не очекнь
+
   function Car(p){
     this.name = p.name;
     this.model = p.model;
@@ -297,7 +353,24 @@ var Cadi = new Car({                 // Получиться объект Cadi
 if(Cadi instanceof  Car) {            // Возвращает true если объект был создан указанным конструктором
 }
 
-//////////////////////////////Прототипы///////////////////////////////////////
+// Привер 3 сдесь новый создается с помощью Object.create
+
+var Dog = {
+    const: function (name, old) {
+        this.name = name;
+        this.old = old;
+        return this;
+    },
+    say: function () {
+        console.log("Ma dog " + this.name + " " + this.old);
+    }
+};
+
+
+var Kevin = Object.create(Dog).const("Kevin", "12");
+
+Kevin.say();
+
 
 //Объекты могут наследовать свойства от других объектов через прототипы и конструктор
 function Dog(name, old) {
@@ -307,11 +380,9 @@ function Dog(name, old) {
         console.log('Это объкект - ' + this.name);
     }
 }
-var Kevin = new Dog('Kevin','34');
-    Dog.prototype.say = function(){  // Теперь Kevin может унаследовать свойсто .say,
-      console.log("Gav");            // достаточно прописать  Kevin.say
-  }
+var Kevin = new Dog('Kevin','34');  // - вт и есть создание экземпляра класса Dog, т.е. обьект
 
+// еще пример
     function Robot(name,old) {
         this.name = name;
         this.old = old;
@@ -322,6 +393,23 @@ var Kevin = new Dog('Kevin','34');
     }
     var Gavi = new Robot('Gavi','34');
     console.log(Gavi.toString());
+// класс - это множество всех обьектов которые наследуют свои свойства от прототипа
+//.prototype каждая функция имеет это свойство в котором хранится прототип свойства которого будут наследовать все обьекты которые
+// будут создаваться при помощи конструктора, изначально он пусотй,
+
+function Dog(name, old) {
+    this.name = name;
+    this.old = old;
+    this.cons = function () {
+        console.log('Это объкект - ' + this.name);
+    }
+}
+var Kevin = new Dog('Kevin','34');  // - вт и есть создание экземпляра класса Dog, т.е. обьект
+
+Dog.prototype.say = function(){  // Теперь Kevin может унаследовать свойсто .say,
+    console.log("Gav");            // достаточно прописать  Kevin.say
+}
+
 
 ////////////////////Цепочка прототипов конструкторов//////////////////////////
 
@@ -386,10 +474,103 @@ Rabbit.prototype.jump = function() {
     alert(this.name + ' прыгает, скорость ' + this.speed);
 }
 
+////////еще прример от соракса с обьяснением
 
 
+
+function Person(name){
+    this.name = name;
+}
+Person.prototype.greet = function(){
+    console.log("Hello my name is " + this.name)
+}
+
+function Developer(name){
+    Person.apply(this, arguments)
+}
+
+
+Developer.prototype = Object.create(Person.prototype); // вот так наледуются конструкторы
+// но тут constructor(см ниже) будет указывать на  Person поэтому нужно прописать вот так
+Developer.prototype.constructor = Developer;
+
+// свойство constructor  присваеется всем обьектам созданным при помощи
+// конструктора, так же есть в prototype, оно рродное для js,
+
+
+////////////////////////////////Object.function.call()/////////////////////////////////////
+obj.func.call(this, arg1, arg2) // метод  call указывает на какой обьект указывавет this
+
+
+var greet = function(){
+    var str = "Name is" + this.name
+    return str
+}
+
+var OnePerson = {
+    name: "jon",
+    greet: greet
+}
+var TwoPerson = {
+    name: "Bob",
+    greet: greet
+
+}
+console.log(TwoPerson.greet.call(OnePerson))
+
+// c аргументами
+
+var greet = function(elem){
+    var str = elem + "Name is " + this.name
+    return str
+}
+
+var OnePerson = {
+    name: "jon",
+    greet: greet
+}
+var TwoPerson = {
+    name: "Bob",
+    greet: greet
+}
+console.log(TwoPerson.greet.call(OnePerson, "hi! "))
+////////////////////////////////Object.function.apply()/////////////////////////////////////
+obj.func.apply(this, [arg1, arg2]) // работает аналогично call, но принимает массив аргументов вместо списка.
+
+var greet = function(elem, elem2){
+    var str = elem + elem2 + "Name is " + this.name
+    return str
+}
+
+var OnePerson = {
+    name: "jon",
+    greet: greet
+}
+var TwoPerson = {
+    name: "Bob",
+    greet: greet
+}
+console.log(TwoPerson.greet.apply(OnePerson, ["hi","! "]))
+
+////////////////////////////////Function.prototype.bind()/////////////////////////////////////
+fun.bind(this) // связывает функцию с обьектом с помощью this , при этом он не запускает и не изменячет функцию а
+               // возвращает новую функцию
+
+var greet = function(){
+    var str = "Name is " + this.name
+    return str
+}
+
+var OnePerson = {
+    name: "jon",
+    greet: greet
+}
+
+var bound = greet.bind(OnePerson)
+console.log(bound())
 
 ////////////////////////////////Function.prototype.call()/////////////////////////////////////
+
 
 fun.call(this, arg1, arg2)//  вызов функции  fun(это может быть конструктор) для функции(или конструктора)
                           // которая определенеа в this, при этом аргуметы в fun становятся аргументами в
@@ -639,7 +820,75 @@ var ff = 'fdgwdf0xcvxcv0000er';
             console.log(fsss);
         }
     }
+/////////////////////////////////JSON////////////////////////////////////////
+// json - js object nutrision
+var user = {
+    name: "frank",
+    id: 54351,
+    toJSON: function(){   // если есть это свойство то JSON.stringify преобразует в
+                          // JSON толдько то что возвращает toJSON
+        return {
+            name: this.name
+        }
+    }
+}
 
+var jsonDATA = JSON.stringify(user); //преобразовывает обьект в JSON
+
+var objectDATA = JSON.parse(jsonDATA);//преобразовывает(распарсивает)JSON в обьект
+
+//////////////////////////////////Date///////////////////////////////////////////
+
+var date = new Date();
+
+var date = new Date(1990,3,1);
+
+var date = new Date(1990,3,1,24,22,345);
+
+data.getMilliseconds(); // милисекунды
+date.getHours();        // часы
+date.getMinutes();      // минуты
+date.getSeconds();      // секунды
+date.getDay();          // день недели
+date.getDate();         //день месяца
+date.getMonth();        // месяц
+date.getYear();         //год
+date.getFullYear();     // полный год
+date.getTime();         //все секунды с 1970
+date.toTimeString();    //только время
+date.toDateString();    // только дата
+Date.now();             // вреся в секундах
+
+//////////////////////////////////регулярные выражения/////////////////////////
+//    /рг/флаги    //вместо кавычек закрывающихся и открывающихся тут слеши
+//    []            // кавычки обьеденения в классы
+//    /gl           // глобал тоесть поиск во всем тексте а не толшько первый
+//    [aoeluy]/gl   // все гласные
+//    [A-Z]         // все заглавные буквы диапазон  это  "-"
+//    [^A-Z]        // ^ кроме, т.е. выделятся только маленькие букы
+//    [0-9] или \d     // это одно и тоже
+//    [^0-9] или \D    // это одно и тоже
+//    \w            // все буквы и цифры
+//    \s            // пустые символы
+//    \S            // все не пустые символы
+//    \ban\b        // ищет отдельные от слово словосочетание an
+//    \Ban\b        // ищет словосочетание an в слове
+//    |             // или
+//    \ban\b|\band\b  // найдет an и and как отдельные слова
+//    ?             // необезательные символ или нежадное повторение
+//    a....e  или a.{4}e     // найдет все слова которые начинаются на а и заканчиваются е,
+                       // а по середине 4 буквы
+
+//   a.*?e или a.+?e          // * тут повторение от 0 и больше раз
+//   \.$             // ищет точку в конце строки
+/////////////////////////////RegExp////////////////////////////////////////////
+var pattern = new RegExp("\w+","g"); // первый аргумент это "\w+", а второй флаг
+var pattern2 = /\w+/g;
+var pattern3 = /\w+/;
+var str = "xvj sdfgn sdfl asewk"
+condole.log(str.match(pattern2))  // получим массив [xvj, sdfgn, sdfl, asewk]
+condole.log(str.match(pattern3))  // получим xvj и индекс
+condole.log(str.search(pattern3)) // только индекс игноррирует флаг глобал
 //////////////////////////Взаимодействие с HTML///////////////////////////////
 
 document.getElementById('');         // По id

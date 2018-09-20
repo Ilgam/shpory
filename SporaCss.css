@@ -512,6 +512,7 @@ body {
     font-style: normal;
 
 }
+/*https://www.fontsquirrel.com/tools/webfont-generator генератор шрифтов*/
 
 /*//////////////////////////////////////////////////Это адаптивность///////////////////////////////////////////////*/
 @media only screen and (max-width: 950px) {
@@ -573,6 +574,20 @@ li {
 
 ul:before, li {
     vertical-align: middle; /* еще вот */
+}
+
+
+/* еще вот */
+
+.cobe {
+    position: absolute;
+    top:50%;
+    left:50%;
+    height: 300px;
+    width: 300px;
+    margin: -150px 0 0 -150px;
+
+
 }
 /*/////////////////////////////////////Немного html////////////////////////////////////////////////////////////////////
 
