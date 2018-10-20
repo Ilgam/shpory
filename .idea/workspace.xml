@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b333285f-ae23-438b-ae89-fbf62ec57473" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShporaJS.js" afterPath="$PROJECT_DIR$/ShporaJS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SporaCss.css" afterPath="$PROJECT_DIR$/SporaCss.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shpory.iml" afterPath="$PROJECT_DIR$/.idea/shpory.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b333285f-ae23-438b-ae89-fbf62ec57473" name="Default" comment="" />
     <ignored path="shpory.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -28,105 +22,96 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ShporaJS.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShporaJS.js">
+      <file leaf-file-name="ShporaSass.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Verstka/ShporaSass.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="107.88461">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="es6.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/es6.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="540" column="2" selection-start-line="540" selection-start-column="2" selection-end-line="540" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43137255">
-              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JqurySpora.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JqurySpora.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="1697" column="14" selection-start-line="1697" selection-start-column="14" selection-end-line="1697" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Adaptive_Web_Design/practik/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="animCSS.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/animation CSS/animCSS.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="read.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GulpOptionsOLD/read.md">
+      <file leaf-file-name="ShporaVerstka.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Verstka/ShporaVerstka.md">
           <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="298" column="0" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validationJQuery.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validationJQuery.js">
+      <file leaf-file-name="ShporaAjax.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/JS/ShporaAjax.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="771" column="4" selection-start-line="771" selection-start-column="4" selection-end-line="771" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Adaptive_Web_Design/practik/index.html">
+      <file leaf-file-name="ShporaAdap.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Verstka/ShporaAdap.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="195" column="27" selection-start-line="195" selection-start-column="27" selection-end-line="195" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SporaCss.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SporaCss.css">
+      <file leaf-file-name="ShporaPostCSS.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Verstka/ShporaPostCSS.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-24.5">
+              <caret line="220" column="10" selection-start-line="220" selection-start-column="10" selection-end-line="220" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShporaSVG.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Verstka/ShporaSVG.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
+              <caret line="425" column="26" selection-start-line="425" selection-start-column="26" selection-end-line="425" selection-end-column="26" />
+              <folding>
+                <marker date="1540004931551" expanded="true" signature="571:741" placeholder="..." />
+                <marker date="1540004931551" expanded="true" signature="10166:10375" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mixin.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Verstka/Mixin.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="169" column="1" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShporaPug.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Verstka/ShporaPug.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShporaCss.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Verstka/ShporaCss.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.4">
               <caret line="590" column="1" selection-start-line="590" selection-start-column="1" selection-end-line="590" selection-end-column="1" />
               <folding />
             </state>
@@ -175,18 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ShporaNodejs.js" />
-        <option value="$PROJECT_DIR$/practickJquery/Listing 01.html" />
-        <option value="$PROJECT_DIR$/PractikNode.js/test.txt" />
-        <option value="$PROJECT_DIR$/SporaNodejs/ShporaNodejs.js" />
-        <option value="$PROJECT_DIR$/PractikNode.js/transform.js" />
-        <option value="$PROJECT_DIR$/Adaptive_Web_Design/practik/mian.css" />
-        <option value="$PROJECT_DIR$/animation CSS/animCSS.css" />
-        <option value="$PROJECT_DIR$/Adaptive_Web_Design/practik/index.html" />
-        <option value="$PROJECT_DIR$/Adaptive_Web_Design/practik/main.css" />
-        <option value="$PROJECT_DIR$/ShporaMongoDB/ParacticMongo/worcflowNode/app.js" />
-        <option value="$PROJECT_DIR$/GulpOptions/read.md" />
-        <option value="$PROJECT_DIR$/validationJQuery.js" />
         <option value="$PROJECT_DIR$/Adaptive_Web_Design/adap.css" />
         <option value="$PROJECT_DIR$/SporaNodejs/EE.js" />
         <option value="$PROJECT_DIR$/SporaNodejs/socket.js" />
@@ -223,9 +196,21 @@
         <option value="$PROJECT_DIR$/Dev/2_1.js" />
         <option value="$PROJECT_DIR$/Dev/2.js" />
         <option value="$PROJECT_DIR$/SporaCss.css" />
-        <option value="$PROJECT_DIR$/ShporaJS.js" />
-        <option value="$PROJECT_DIR$/es6.js" />
         <option value="$PROJECT_DIR$/script.js" />
+        <option value="$PROJECT_DIR$/es6.js" />
+        <option value="$PROJECT_DIR$/ShporaJS.js" />
+        <option value="$PROJECT_DIR$/pugSass.pug" />
+        <option value="$PROJECT_DIR$/ShporaPug.pug" />
+        <option value="$PROJECT_DIR$/ShporaSass.scss" />
+        <option value="$PROJECT_DIR$/Verstka/ShporaSass.css" />
+        <option value="$PROJECT_DIR$/Verstka/ShporaSass.scss" />
+        <option value="$PROJECT_DIR$/JS/ShporaAjax.js" />
+        <option value="$PROJECT_DIR$/Verstka/ShporaVerstka.html" />
+        <option value="$PROJECT_DIR$/Verstka/Mixin.scss" />
+        <option value="$PROJECT_DIR$/Verstka/ShporaVerstka.md" />
+        <option value="$PROJECT_DIR$/Verstka/Adaptiv/ShporaAdap.css" />
+        <option value="$PROJECT_DIR$/Verstka/ShporaSVG.pug" />
+        <option value="$PROJECT_DIR$/Verstka/ShporaPostCSS.scss" />
       </list>
     </option>
   </component>
@@ -245,10 +230,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1692" />
-    <option name="height" value="1026" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1678" />
+    <option name="height" value="1009" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -291,16 +276,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shpory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shpory" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Verstka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PODGOTOVKA/sorax" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -314,22 +313,26 @@
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\openserver\OpenServer\domains\shpory\SporaNodejs" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mew11.06.2018\shpory\Verstka" />
+      <recent name="D:\mew11.06.2018\shpory" />
       <recent name="D:\openserver\OpenServer\domains\shpory\PractikNode.js" />
       <recent name="D:\openserver\OpenServer\domains\shpory\email" />
       <recent name="D:\openserver\OpenServer\domains\shpory\Dev" />
-      <recent name="D:\openserver\OpenServer\domains\shpory\Adaptive_Web_Design\practik" />
-      <recent name="D:\openserver\OpenServer\domains\shpory\PractikNode.js\Chat" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\mew11.06.2018\shpory\Verstka" />
+      <recent name="D:\mew11.06.2018\shpory\Verstka\Adaptiv" />
+      <recent name="D:\mew11.06.2018\shpory\Server" />
+      <recent name="D:\mew11.06.2018\shpory\JS" />
+      <recent name="D:\mew11.06.2018\shpory\practic" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.formserver.js">
-    <configuration default="false" name="transform.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/nodejs/node" path-to-js-file="transform.js" working-dir="$PROJECT_DIR$/PractikNode.js">
+    <configuration default="false" name="transform.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/nodejs/node" path-to-js-file="$PROJECT_DIR$/practic/PractikNode.js/transform.js" working-dir="$PROJECT_DIR$/practic/PractikNode.js">
       <method />
     </configuration>
-    <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/nodejs/node" path-to-js-file="server.js" working-dir="$PROJECT_DIR$/PractikNode.js/Chat">
+    <configuration default="false" name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="D:/nodejs/node" path-to-js-file="$PROJECT_DIR$/practic/PractikNode.js/Chat/server.js" working-dir="$PROJECT_DIR$/practic/PractikNode.js/Chat">
       <method />
     </configuration>
     <configuration default="false" name="test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="test.js" working-dir="D:/Poster/test">
@@ -338,7 +341,7 @@
     <configuration default="false" name="Listing 01.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/shpory/practickJquery+Ajax+Habdlebars/Listing 01.html">
       <method />
     </configuration>
-    <configuration default="false" name="formserver.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="formserver.js" working-dir="$PROJECT_DIR$/practickJquery+Ajax+Habdlebars">
+    <configuration default="false" name="formserver.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/practic/practickJquery+Ajax+Habdlebars/formserver.js" working-dir="$PROJECT_DIR$/practic/practickJquery+Ajax+Habdlebars">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -468,30 +471,30 @@
     <option name="totallyTimeSpent" value="189573000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1692" height="1026" extended-state="0" />
+    <frame x="1" y="1" width="1678" height="1009" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24693628" sideWeight="0.49030787" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15822002" sideWeight="0.49030787" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32460135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20501138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34933037" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27812114" sideWeight="0.50969213" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20547946" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Get Gist" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3247768" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -534,42 +537,42 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/SporaNodejs/express2.js</url>
+          <url>file://$PROJECT_DIR$/Server/SporaNodejs/express2.js</url>
           <line>890</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/SporaNodejs/express2.js</url>
+          <url>file://$PROJECT_DIR$/Server/SporaNodejs/express2.js</url>
           <line>1194</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/SporaNodejs/express2.js</url>
+          <url>file://$PROJECT_DIR$/Server/SporaNodejs/express2.js</url>
           <line>1379</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/SporaNodejs/express2.js</url>
+          <url>file://$PROJECT_DIR$/Server/SporaNodejs/express2.js</url>
           <line>1413</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/SporaNodejs/express2.js</url>
+          <url>file://$PROJECT_DIR$/Server/SporaNodejs/express2.js</url>
           <line>1436</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/SporaNodejs/express2.js</url>
+          <url>file://$PROJECT_DIR$/Server/SporaNodejs/express2.js</url>
           <line>1441</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/SporaNodejs/express2.js</url>
+          <url>file://$PROJECT_DIR$/Server/SporaNodejs/express2.js</url>
           <line>1475</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/SporaNodejs/express2.js</url>
+          <url>file://$PROJECT_DIR$/Server/SporaNodejs/express2.js</url>
           <line>1502</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
@@ -579,7 +582,7 @@
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/es6.js</url>
+          <url>file://$PROJECT_DIR$/JS/ShporaES6.js</url>
           <line>381</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
@@ -589,153 +592,37 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/practickJquery+Ajax+Habdlebars/formserver.js">
+    <entry file="file://$PROJECT_DIR$/Verstka/ShporaPug.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="61" selection-start-line="7" selection-start-column="61" selection-end-line="7" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Poster/test/test/js-vending-machine-kata/src/vendingMachine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PractikNode.js/practick.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="79" column="17" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practickJquery+Ajax+Habdlebars/flowers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practickJquery+Ajax+Habdlebars/Listing 01.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="118" column="44" selection-start-line="118" selection-start-column="42" selection-end-line="118" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practickJquery/leftarrows.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practickJquery/jquery-2.0.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practickJquery/Listing 01.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="27" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dev/3_1/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dev/3_2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dev/3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dev/2_prack.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dev/3_1/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dev/3_1/Pet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dev/3_1/SaveData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dev/4.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dev/3_1/users.js">
+    <entry file="file://$PROJECT_DIR$/Verstka/ShporaCss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="590" column="1" selection-start-line="590" selection-start-column="1" selection-end-line="590" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practic/PractikNode.js/Mydir/test.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SporaNodejs/EE.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SporaAjax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PractikNode.js/Mydir/test.txt">
+    <entry file="file://$PROJECT_DIR$/practic/PractikNode.js/NodePractivk/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PractikNode.js/NodePractivk/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SporaNodejs/fs.js">
+    <entry file="file://$PROJECT_DIR$/Server/SporaNodejs/fs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
@@ -763,21 +650,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PractikNode.js/NodePractivk/server.js">
+    <entry file="file://$PROJECT_DIR$/practic/PractikNode.js/NodePractivk/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15668203">
           <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dev/2_1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0011520737">
-          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PractikNode.js/NodePractivk/db.js">
+    <entry file="file://$PROJECT_DIR$/practic/PractikNode.js/NodePractivk/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -791,63 +671,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Dev/2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ShporaMongoDB/mongoDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.859447">
-          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SporaNodejs/Path_Url_Util_jsdom.js">
+    <entry file="file://$PROJECT_DIR$/Server/SporaNodejs/Path_Url_Util_jsdom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SporaNodejs/socket.js">
+    <entry file="file://$PROJECT_DIR$/Server/SporaNodejs/socket.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SporaNodejs/Stream.js">
+    <entry file="file://$PROJECT_DIR$/Server/SporaNodejs/Stream.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SporaNodejs/TCP.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SporaNodejs/Domain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SporaNodejs/express.js">
+    <entry file="file://$PROJECT_DIR$/Server/SporaNodejs/express.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="412" column="18" selection-start-line="412" selection-start-column="8" selection-end-line="412" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SporaNodejs/express2.js">
+    <entry file="file://$PROJECT_DIR$/Server/SporaNodejs/express2.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="742" column="20" selection-start-line="742" selection-start-column="20" selection-end-line="742" selection-end-column="20" />
@@ -855,7 +707,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SporaNodejs/http.js">
+    <entry file="file://$PROJECT_DIR$/Server/SporaNodejs/http.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
@@ -869,35 +721,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Adaptive_Web_Design/adap.css">
+    <entry file="file://$PROJECT_DIR$/JS/ShporaES6.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Adaptive_Web_Design/practik/index.html">
+    <entry file="file://$PROJECT_DIR$/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="44" column="73" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Adaptive_Web_Design/practik/main.css">
+    <entry file="file://$PROJECT_DIR$/JS/ShporaJS.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="1250" column="33" selection-start-line="1250" selection-start-column="33" selection-end-line="1250" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/animation CSS/animCSS.css">
+    <entry file="file://$PROJECT_DIR$/practic/practickAjax/myscript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practic/practickAjax/.idea/.name">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/SporaNodejs/TCP.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/SporaNodejs/EE.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="43" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/SporaNodejs/Domain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/SporaNodejs/global_process_Buffer">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -906,59 +790,187 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="99.26786">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dev/2_1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dev/2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dev/3_1/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="22" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Dev/3_1/Pet.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validationJQuery.js">
+    <entry file="file://$PROJECT_DIR$/Dev/3_1/SaveData.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SporaCss.css">
+    <entry file="file://$PROJECT_DIR$/Dev/3_1/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="590" column="1" selection-start-line="590" selection-start-column="1" selection-end-line="590" selection-end-column="1" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/es6.js">
+    <entry file="file://$PROJECT_DIR$/Dev/3_1/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="540" column="2" selection-start-line="540" selection-start-column="2" selection-end-line="540" selection-end-column="2" />
-          <folding />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JqurySpora.js">
+    <entry file="file://$PROJECT_DIR$/practic/practikAdaptiv/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practic/practikAdaptiv/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/ShporaJqury.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1697" column="14" selection-start-line="1697" selection-start-column="14" selection-end-line="1697" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShporaJS.js">
+    <entry file="file://$PROJECT_DIR$/JS/ShporaHandlebars.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/ShporaValidationJQuery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
+    <entry file="file://$PROJECT_DIR$/Server/ShporaMongoDB/mongoDB.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43137255">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="2" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS/ShporaAjax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="771" column="4" selection-start-line="771" selection-start-column="4" selection-end-line="771" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Verstka/ShporaVerstka.md">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="298" column="0" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Verstka/Mixin.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="169" column="1" selection-start-line="169" selection-start-column="1" selection-end-line="169" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Verstka/ShporaPug.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Verstka/ShporaAdap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="195" column="27" selection-start-line="195" selection-start-column="27" selection-end-line="195" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../loftscholspori/loftshpory/0-2verst/5PostCSS/Пример кода/gulp-postcss-master/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Verstka/ShporaPostCSS.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.5">
+          <caret line="220" column="10" selection-start-line="220" selection-start-column="10" selection-end-line="220" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Verstka/ShporaSVG.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="425" column="26" selection-start-line="425" selection-start-column="26" selection-end-line="425" selection-end-column="26" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1540004931551" expanded="true" signature="571:741" placeholder="..." />
+            <marker date="1540004931551" expanded="true" signature="10166:10375" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Verstka/ShporaSass.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="107.88461">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Verstka/ShporaCss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.4">
+          <caret line="590" column="1" selection-start-line="590" selection-start-column="1" selection-end-line="590" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

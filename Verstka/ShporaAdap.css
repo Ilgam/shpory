@@ -1,0 +1,442 @@
+/*Нужно прописать в html файле в хедере
+meta(name='viewport' content='width=device-width')
+Это значит что ширина дивайса должна быть рана ширине девайса
+
+/////////////////////////////////////////modernizr/////////////////////////////////////////////*/
+
+/*<script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+В помощь к бибилиотеке html5shim в работе с IE, Modernizr также обеспечивает набор условных классов.
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+Например, если в вашем дизайне активно используется свойство bpx-shadow, которое не поддерживается IE6-IE8,
+определить стили для этих браузеров можно так:
+
+body.lt-ie7 #box, body.lt-ie8 #box, body.lt-ie9 #box {
+    zoom: 1;
+    filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=5, OffY=5, Color=#ff0000);
+}
+
+
+/*Например, вот как выглядит тег html для текущей версии Chrome:
+
+<НTML class="js no-touch postmessage history multiplebgs boxshadow opacity cssanimations
+csscolumns cssgradients csstransforms csstransitions fontface localstorage sessionstorage
+svg inlinesvg blobbuilder blob bloburls download formdata">
+
+А вот как выглядит этот тег для браузера Internet Explorer 7:
+
+<НTML class="js no-touch postmessage no-history no-multiplebgs no-boxshadow no-opacity
+no-cssanimations no-csscolumns no-cssgradients no-csstransforms no-csstransitions fontface
+localstorage sessionstorage no-svg no-inlinesvg wf-loading no-blobbuilder no-blob no-bloburls no-download no-formdata">
+
+
+Вы можете использовать эти классы в CSS для создания специфических стилей для браузеров не поддерживающих
+какие-либо новый свойства.*/
+
+.button {
+    background: #000; /*обрати внимение на цвет */
+    opacity: 0.75;
+}
+/*Если браузер не поддерживает CSS свойство opacity, кнопка отобразится с чёрным фоном вместо серого полупрозрачного.*/
+
+/*Используя класс добавленный modernizr, можно переопределить начальный стиль:*/
+
+.no-opacity .button {
+    background: #444; /*обрати внимение на цвет */
+}
+
+/*//////////////////Обнаружение поддержки свойств с помощью Javascript
+
+В дополнение к классам в тег html, modernizr также создаёт Javascript объект к вашему документу под названием Modernizr.
+Этот объект позволяет проверить каждую функцию на наличие поддержки браузером.
+
+Modernizr.cssgradients; //True в Chrome, False в IE7
+Modernizr.fontface; //True в Chrome, True в IE7
+Modernizr.geolocation; //True в Chrome, False в IE7
+Следущая проверка может быть использована для создания логических ветвей:
+if (Modernizr.canvas){
+                       // можем рисовать!
+} else {
+                     // в противном случае выполняем fallback  например SVG
+}
+if (Modernizr.touch){
+                             // можем использовать rollover/rollouts события
+} else {
+                           //
+}                                                                                */
+
+/*//////////////////////////////////////////////////ВАЖНАЯ ФОРМУЛА!//////////////////////////////////////////////*/
+
+/*Сначало нужно изменить родительского элемента на проценты,а ширину его потомков считать по формуле */
+
+/*Цель / контекст * 100*/
+
+/*цель - это ширина потомка в пикселях*/
+/*контекст - это ширина родителя в пикселях*/
+           /*Например*/
+.perent{
+    width: 1640px;
+}
+
+.children {
+    width: 650px;
+}
+
+/*Ставим ширину родителя скажем 90 процентов*/
+/*Теперь высчитываем ширину по формуле*/
+
+/*650/1640 * 100 = 39,63414634146341%*/
+
+.perent{
+    width: 90%; /*не забывам здесь писать 1640px*/
+}
+
+.children {
+    width: 39.63414634146341%;/*650px*/
+}
+
+
+/*или вот%*/
+
+.main-block {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    font-size: 40px;
+    color: beige;
+}
+.left-block {
+    float: left;
+    width: 71.428%; /* 700/980 = 0.71428 */
+    height: 100vh;
+    background: darkseagreen;
+}
+.right-block {
+    float: right;
+    width: 28.574%; /* 280/980 = 0.28574 */
+    height: 100vh;
+background:darksalmon;
+}
+
+
+/*/////////////////////формуля расчета размера шрифта*/
+/*16px это стандартный размер шрифта, соответственно если какоой-нибудь шрифт скажем равен 30 px его нужно
+перевсести в em.
+30px / 16px = 1.875em
+
+/////////////////////////////////////с помощью эмитаптра таблиц//////////////////////////////////*/
+.perent{
+   display: table;
+}
+
+.children {
+    display: table-cell;
+}
+
+/*////////////////////////////////////////////////модульная сетка////////////////////////////////////////*/
+.cols {
+    float: left;
+    text-align: center;
+}
+.col1{width: 8.333333333333333%  }
+.col2{width: 16.66666666666667%  }
+.col3{width:  25% }
+.col4{width:   33.33333333333333%}
+.col5{width:  41.66666666666667% }
+.col6{width:  50% }
+.col7{width:   58.33333333333333%}
+.col8{width:   66.66666666666666%}
+.col9{width:  75% }
+.col10{width:  83.33333333333333% }
+.col11{width:   91.66666666666666%}
+.col12{width:  100% }
+
+/*//////////////////////////////////////////////media queries/////////////////////////////////////////////////////
+
+/*С их помощью мы можем отслеживать разрешение экрана пользователя и отображать необходимые стили для каждого разрешения или устройства.
+
+Условия можно задать следующие условия:
+
+@media screen and (max-width: XXXpx) { }   ширина  ХХХ пикселей и меньше(напрмер это до 320пикселей)
+@media screen and (min-width: XXXpx) { }  шириан ХХХ пикселей и больше (напрмер это от 320пикселей)
+@media screen and (min-width: XXXpx) and (max-width: YYYpx) { }
+@media screen and (max-device-width: XXXpx) { }
+Лично я чаще всего использую первое условие.
+
+Так же можно добавлять условия, для каких экранов будет подключаться та или иная таблица стилей:
+
+<link rel="stylesheet" media="screen and (max-width: 960px)" href="big.css" />
+<link rel="stylesheet" media="screen and (min-width: 480px)" href="small.css" />
+
+<!-- для iPhone 4 -->
+<link rel="stylesheet" media="only screen and (-webkit-min-device-pixel-ratio: 2)" type="text/css" href="iphone4.css" />
+
+<!-- для iPad portrait and landscape -->
+<link rel="stylesheet" media="all and (orientation:portrait)" href="portrait.css">
+<link rel="stylesheet" media="all and (orientation:landscape)" href="landscape.css">
+
+
+
+///////////////////////////////////ОСНОВНЫЕ
+
+/*меджены надо расчитывать!!!*!/*/
+/*Большие дисплеи ? 1200 пикселей и больше;*/
+/*Стандартная ширина ? 980 пикселей и выше (до 1200 пикселей);*/
+/*Портретная ориентация планшетов ? 768 пикселей;*/
+/*Смартфоны/планшеты ? 767 пикселей;*/
+/*Телефоны ? 480 пикселей и меньше.*/
+/*У российских разработчиков встречается также еще один вариант расположения контрольных точек для адаптивной верстки макета:*/
+
+/*1600 пикселей — для десктопов;*/
+/*1280 пикселей — для десктопов, планшетов и ноутбуков;*/
+/*1024 пикселя — для планшетов и ноутбуков;*/
+/*800 пикселей — для смартфонов;*/
+/*320/480 пикселей — для телефонов и смартфоно*/
+
+/*max-width: 320px - смартфон в портретной ориентации ;
+• max-width: 480px - смартфон в альбомной ориентации;
+• max-width: 600px – небольшой планшет типа Amazon Kindle
+(600x800)
+• max-width: 768px - планшет в портретной ориентации;
+• max-width: 980px - планшет в альбомной ориентации;
+• max-width: 1200px - стационарный компьютер;
+• min-width: 1200px – телевизор (большой экран).
+
+/* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
+@media  (min-width : 320px) and (max-width : 480px) {
+    /* стили */
+}
+
+/* Smartphones (горизонтальная) ----------- */
+@media  (min-width: 321px) {
+    /* стили */
+}
+
+/* Smartphones (вертикальная) ----------- */
+@media (max-width: 320px) {
+    /* стили */
+}
+
+/* iPads (вертикальная и горизонтальная) ----------- */
+@media  (min-width: 768px) and (max-width: 1024px) {
+    /* стили */
+}
+
+/* iPads (горизонтальная) ----------- */
+@media  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* стили */
+}
+
+/* iPads (вертикальная) ----------- */
+@media  (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    /* стили */
+}
+
+/* iPad 3********* -webkit-device-pixel-ratio	Задаёт количество физических пикселей устройства на каждый css-пиксель.*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+@media  (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+
+/* Настольные компьютеры и ноутбуки ----------- */
+@media (min-width: 1224px) {
+    /* стили */
+}
+
+/* Большие экраны ----------- */
+@media (min-width: 1824px) {
+    /* стили */
+}
+
+/* iPhone 4 ----------- */
+@media  (min-width: 320px) and (max-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+@media  (min-width: 320px) and (max-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+
+/* iPhone 5 ----------- */
+@media  (min-width: 320px) and (max-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+@media  (min-width: 320px) and (max-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+
+/* iPhone 6 ----------- */
+@media  (min-width: 375px) and (max-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+@media  (min-width: 375px) and (max-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+
+/* iPhone 6+ ----------- */
+@media (min-width: 414px) and (max-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+@media  (min-width: 414px) and (max-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media  (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+@media  (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media  (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+@media  (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media  (min-width: 360px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+@media  (min-width: 360px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+
+/* Smartphones (вертикальная и горизонтальная ориентация) ----------- */
+@media  (min-width : 320px) and (max-width : 480px) {
+    /* стили */
+}
+/* Smartphones (горизонтальная) ----------- */
+@media  (min-width: 321px) {
+    /* стили */
+}
+/* Smartphones (вертикальная) ----------- */
+@media  (max-width: 320px) {
+    /* стили */
+}
+/* iPads (вертикальная и горизонтальная) ----------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* стили */
+}
+/* iPads (горизонтальная) ----------- */
+@media  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* стили */
+}
+/* iPads (вертикальная) ----------- */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    /* стили */
+}
+/* iPad 3**********/
+@media  (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+@media  (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+/* Настольные компьютеры и ноутбуки ----------- */
+@media (min-width: 1224px) {
+    /* стили */
+}
+/* Большие экраны ----------- */
+@media  (min-width: 1824px) {
+    /* стили */
+}
+/* iPhone 4 ----------- */
+@media (min-width: 320px) and (max-width: 480px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+@media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* стили */
+}
+/* iPhone 5 ----------- */
+@media  (min-width: 320px) and (max-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+@media  (min-width: 320px) and (max-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+/* iPhone 6 ----------- */
+@media (min-width: 375px) and (max-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+@media (min-width: 375px) and (max-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+/* iPhone 6+ ----------- */
+@media  (min-width: 414px) and (max-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+@media  (min-width: 414px) and (max-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+/* Samsung Galaxy S3 ----------- */
+@media  (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+@media (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2){
+    /* стили */
+}
+/* Samsung Galaxy S4 ----------- */
+@media  (min-width: 320px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+@media (min-width: 320px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+/* Samsung Galaxy S5 ----------- */
+@media  (min-width: 360px) and (max-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+@media  (min-width: 360px) and (max-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
+    /* стили */
+}
+
+
+/*Адаптивное видео
+
+ Данный трюк CSS позволяет встраиваемому видео растягиваться до установленных границ.*/
+
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video iframe,
+.video object,
+.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Минимальная и максимальная ширина
+
+ Свойство max-width позволяет устанавливать максимальную ширину элемента. Его надо использовать,
+ чтобы предотвратить расширение элемента за определенные рамки.
+Контейнер со свойством max-width
+В ниже приведенном примере определяется размер контейнера 800px, но устанавливается ограничение по размеру границу 90%.*/
+
+.container {
+    width: 800px;
+    max-width: 90%;
+}
+/* Адаптивное изображение
+Можно сделать изображение с автоматически изменяющимся размером до максимальной величины с помощью свойств max-width:100% и height:auto.*/
+
+img {
+    max-width: 100%;
+    height: auto;
+}

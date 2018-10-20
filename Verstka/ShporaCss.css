@@ -1,0 +1,887 @@
+*{
+    /*звездочка этодля всех*/
+    border: 1px solid #696969;
+
+    /*Это рамка: размер жирный цвет (transparent-прозрачный вместь цвета);
+  есть еще dashed - это пунктир
+  dotted - это точками
+  inset - это когда одно сторона жирная другая нет*/
+    /*border-top: ; - это задает своейства верхней рамки*/
+    /*border-left: - это левой;*/
+    /*border-bottom: -это нижней;*/
+    /*border-right: - это правой;
+  также служит для написание одной линии
+    */
+
+}
+
+a {
+    /*это чтобы у все ссылок было одно значение*/
+    text-decoration: none;
+    /*Это мы убираем оформлние*/
+}
+
+
+body {
+    font-family: "PT Sans", Arial, Verdana;
+    /*Это шрифт*/
+    font-size: 13px;
+    /*Это размер шрифта*/
+    color: #333;
+    /*это цвет*/
+    background-color: rgb(25,25,112);
+    /*цфет фонв: red green bliu*/
+    color: rgba(184,134,11,1);
+    /*Цвец: тоже самое + прозрачность*/
+
+    /*background: #ccc;*/
+    /*Это фон есть еще */
+    margin: 0;
+    /*внешнее выравнивание*/
+    /*font-weight: bold;
+    Это жирный шрифт*/
+
+  /*///////////////////////работа с текстом font-style text-decoration text-align  text-indent text-shadow////////////*/
+
+    font-style: italic;
+    /*Это курсив*/
+    /*есть еще*/
+    /*text-decoration: underline; - это подчеркнутый текст*/
+    /*text-decoration: overline;  -  это черта ннаверхк текста*/
+    /*text-decoration: line-through; - Это зачеркнутый текст*/
+    /*text-align: center; */
+    /*делает текст по центру
+    есть еще */
+    /*text-align: justify; - распределяет текст по ширене*/
+    /*есть еще*/
+    text-indent: 30px;
+    /*Это изменяет отступ*/
+    /*line-height: 20px; - это межстьрочная высота*/
+    text-shadow: 0 1px 0 #eee, 2px 2px 3px #000;
+    /*Это тень, 0 -это отступ по горезоньеле, 1px - это по вертекали, 0-размытие, №000 -цвет
+    если поставить запятую и еще написать одну тень как в примере то будет эффект три де*/
+
+    border-radius: 10px 60px;
+    /*закругление: верхнево левого и нижнего правого; верхнего провогои и нижнего левого */
+    /*border-radius: 10px 10 20px 20px;
+    /*это закругления: верхний левый верхний правый нижний праввый нижний левый
+    можноставить одно значеине
+     */
+    -moz-border-radius: 10px 60px;
+    -webkid-border-radius: 10px 60px;
+    -o-border-radius: 10px 60px;
+    /*это нужно что бы работало нормально в фаирфоксе хроме и мозиле*/
+}
+.cont {
+    /*это мы обращаемся к классу, если нам надо обратиться к id то вместо точки пишем #*/
+    width: 200px;
+    /*это ширина*/
+    height: 100px;
+    /*Это высота*/
+
+ /*////////////////////////////////////////////////////////display:///////////////////////////////////////////////////*/
+
+    display: inline-block;
+    /*это присваивает значенте блока(cont уже блочный)
+    есть значение
+    Block - присваивает блочные свойства
+    inline-block - встрочку
+    none - это элемент изчезает(пригодится)
+     */
+    position: relative;
+    /*смотри position: absolute;*/
+
+ /*////////////////////////////////////////////////////////overflow///////////////////////////////////////////////////*/
+
+    overflow: auto;
+    /*свойство отвечающее за - как будет всети себя содерживое которое не вмещается в контейнер
+    бывает
+    scroll - добавляет палзунок, внизу и сбоку
+    hidden - скрывает лишнне
+    visible - делвает видимым лишнее;
+    auto - автоматически добавляет палзунок, какой он считает нужным
+    */
+
+ /*////////////////////////////////////////////////////////border-radius///////////////////////////////////////////////////*/
+
+
+    border-radius: 10px 60px;
+    /*закругление: верхнево левого и нижнего правого; верхнего провогои и нижнего левого */
+    /*border-radius: 10px 10 20px 20px;
+    /*это закругления: верхний левый верхний правый нижний праввый нижний левый
+    можноставить одно значеине
+    */
+    -moz-border-radius: 10px 60px;
+    -webkid-border-radius: 10px 60px;
+    -o-border-radius: 10px 60px;
+    /*это нужно что бы работало нормально в фаирфоксе хроме и мозиле*/
+}
+
+/*////////////////////////////////////////////////////////nth-child///////////////////////////////////////////////////*/
+
+.list li {
+    /*Это мы обращаемся к элементу списка*/
+    background: red;
+}
+.cont2 li:nth-child(2n) {
+    /*это мы присваиваем свойства каждому второму элементу списка*/
+    background: pink;
+}
+.cont2 li:first-child {
+    /*это мы присваиваем значение первому элементу списка*/
+    background: green;
+}
+
+.cont2 li:last-child {
+    /*это мы присваиваем значенте последнему элементу списка*/
+    background: yellow;
+}
+
+/*/////////////////////////////////////////////////////////hover////////////////////////////////////////////////////////*/
+
+a:hover {
+    /*это изменение свойств при нажатие, есть еще:
+/active - для ссылок, которые в данный момент активны
+:focus - задать свойства поля ввода когда курсор находится в этом поле ввода
+    */
+    background: orange;
+}
+/*/////////////////////////////////////////////////////////after////////////////////////////////////////////////////////*/
+
+a[href$=".jpg"]::after {
+    /*after - позволяет добавить свое содержимое к элементом(будет писаться после элемента)
+    есть еще beforе - тоже самое но будет до элемента*/
+    /*квадратные скобки это селекторы по атрибутом. в данном случае форматироваться будут все
+    элементы а(то еть ссылки) у которых есть атрибут href
+    -если после href стоит ^, то значит форматироваться будет все ссылки, которые начинаются со
+    значения которое стоит в скобачках
+    -если после href стоит $, то форматироваться будут ссылки, которе заканчиваются на значение
+    в скобачках
+    -если *, то форматироваться будут все ссылки где есть значение в скобачках*/
+    content: ' (jpg)';
+    font-size: 10px;
+    color: #888;
+}
+/*////////////////////////////////////////////////////////////margin/////////////////////////////////////////////*/
+
+#cont {
+
+    margin: 10px 20px 30px 40px;
+    /*внешний отступ: сверху, справо, снизу, слева
+      можно прописывать: по x  и по y;
+      можно прописывать: одно значение для всх сторон;
+      Это если прописывать по отдельности каждую сторону;
+    margin-left: ;
+    margin-right: ;
+    margin-bottom: ;
+    margin-top: ;
+    бывает еще так
+    margin: 10px auto;
+    Это значит сверху и низу будет 10 пикселей, а по бокам будет высчитываться автоматически
+    */
+    padding: 10px 20px 30px 40px;
+    /*внутренний отступ все тоже самое, что и margin*/
+    max-width: 500px;
+    /* Этог максимальная ширина, есть еще минимальная ширина - min-width: ;*/
+
+    max-width: 500px;
+    /*  Это максимальная высота , есть еще минимальная высота -  min-height:; */
+
+
+}
+/*//////////////////////////////////////////position//////////////////////////////////////////////////////////*/
+
+.cont3 {
+    position: absolute;
+    /*Оказывается важная штука - позиционирование, теперь мы можем использовать
+    bottom: ; (в них все в пикселях, но если например -20px постиавить то будет немного выйдет за
+    родительский элемент)
+	right: ;
+	left: ;
+	right: ;
+	Этот сфойство рабоатет с привязкой к position: relative;
+	то есть в родительском элементе должно быть прописано position: relative;
+	и cont3 будет изменятся только в нем т.е. в cont(так как там прописано position: relative;)
+	еще есть
+	position: fixed; - оно будут фиксировано и не зависимо от скрола
+	если после прописать
+	z-index: 0; - то оно будет позпди элементов;
+	z-index: 1;  -  то впереди элемнтов;
+     */
+}
+
+/*///////////////////////////////////////// треугольник с помошью border////////////////////////////////////////////////////////*/
+
+.conter1 {
+    /*как пишут треугольник с помошью border*/
+    height: 0px;
+    width: 0px;
+    border-bottom: 100px solid #b8860b;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+
+}
+.conter2 {
+    /*как пишут треугольник с помошью border*/
+    height: 0px;
+    width: 0px;
+    border-top: 100px solid #b8860b;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    /*это важно прописывать в списках а то все смещаться будет*/
+    list-style: none;
+}
+/*//////////////////////////////////////////////background////////////////////////////////////////////////////////////*/
+.back {
+    background-image: url(1.jpg);
+    background-repeat: no-repeat;
+    /*Есть значение repeat-х по горезонтале и repeat-у по вертекали*/
+    background-position:  left;
+    /* Как распологается картинка, можно писать сразу два значение по игрику и по иксу есть еще top bottom left right */
+    background-attachment: fixed;
+    /*Фиксация для страницы*/
+    background-size: 1400px 1100px;
+    /*разсер страницы указвается как в пикселях(два или одно значеие) так и в проценттах
+     так же можно
+      cover - не полностьбю в контейнере
+     contain - моштабируется полностью в контейнере
+     auto - автоматически
+     Важно - можно прописать несколько картнок на бекграунд, а погтом менять им свойства. они
+     будут прописываться ерез запятую например
+     background-repeat: no-repeat, repeat;
+      Важно можно прописать все в строчу
+      background: attachment color url  position repeat (Потом можно поставить запятю и далее url);
+      */
+}
+/*////////////////////////////////////////////////////спрайты-//////////////////////////////////////////////////////////////*/
+
+.buttons li {
+    /*так верстаются спрайты- файлы со множестовм картинок*/
+    background: url(sprite.png) no-repeat;
+    display: inline-block;
+    width: 122px;
+    height: 30px;
+    border-radius: 14px;
+    cursor: pointer;  /*////////////////////////////Указатель мыши - палец///////////////////////////////*/
+}
+
+.buttons .buttons1:hover {
+
+    background-position: 0px -32px;
+}
+
+.buttons .buttons1:active {
+
+    background-position: 0px -64px;
+}
+.buttons .buttons2 {
+
+    background-position: -130px 0px;
+}
+.buttons .buttons2:hover {
+
+    background-position: -130px -32px;
+}
+
+.buttons .buttons2:active {
+
+    background-position: -130px -64px;
+}
+.buttons .buttons3 {
+
+    background-position: -130px -102px;
+}
+
+.buttons .buttons3:hover {
+
+    background-position: -130px -134px;
+}
+
+.buttons .buttons3:active {
+
+    background-position: -134px -166px;
+}
+/*///////////////////////////////////////////////list-style картинки иконки///////////////////////////////////////////////*/
+.spok {
+    list-style-type: square;
+    /*здесь можно менять иконочку перед списком, квадрат круг и много чего*/
+    list-style-position: inside;
+    /*где будут находиться картинки outside - вне, inside - внутри */
+    list-style-image: url(https://r.mradx.net/pictures/F4/F6EAB6.jpg);
+    /*соответственно картинка*/
+}
+/*//////////////////////////////////////////////////тени/////////////////////////////////////////////////////////////////*/
+.hhh {
+    border-radius: 50%;
+    /*так делается круг*/
+    -o-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0 3px 20px 2px rgba(0,0,0,0.5),inset 0 5px 0 rgba(225,225,225,0.2), 0 5px 0
+    rgba(0,0,0,.1), 0 0 20px rgba(0,0,0,.1);
+    /*тени: по горизонтале, по вертикали, размытие, размер тени, цвет
+    inset 0 2px 0 rgba(225,225,225,.24); - это внутреняя тень
+    */
+    -moz-box-shadow: 0 3px 20px 2px rgba(0,0,0,0.5),inset 0 5px 0 rgba(225,225,225,0.2), 0 5px 0
+    rgba(0,0,0,.1), 0 0 20px rgba(0,0,0,.1);
+
+    -webkit-box-shadow: 0 3px 20px 2px rgba(0,0,0,0.5),inset 0 5px 0 rgba(225,225,225,0.2), 0 5px 0
+    rgba(0,0,0,.1), 0 0 20px rgba(0,0,0,.1);
+}
+.hhh::after {
+    opacity: 0.7;
+    /*Определяет уровень прозрачности элемента веб-страницы
+    В качестве значения выступает число из диапазона [0.0; 1.0]*/
+}
+
+body {
+    background: #dcdcdc;
+    font: 1em Tahoma, Arial;
+    /* Универсальное свойство, которое позволяет одновременно задать несколько характеристик шрифта и текста.*/
+    text-transform: uppercase;
+    /*Все буквы заглавные*/
+}
+/*//////////////////////////////////////////////////////прозрачность///////////////////////////////////////////////////*/
+
+.nav {
+    opacity: .5;
+    /*прозрачность*/
+    transition: opacity .3s ease-in-out;
+}
+
+/*/////////////////////////////////////////////////////transition//////////////////////////////////////////////////////*/
+
+.nav li a {
+    line-height: 40px;
+    /*Устанавливает межстрочный интервал.
+	line-height: значение в процентах | проценты | normal(это автоматически) */
+    transition: background .2s ease-in-out 1s;
+    /*transition-property: background;*/
+    /*Здесь иы можем задать какому свойству мы задать плавный переход. Может быть любое свойство css
+    можно использовать слово all- для всез свойств
+    */
+    /*transition-duration: .2s;*/
+    /*продолжительность перехода*/
+    /*transition-timing-function: ease-in-out;*/
+    /*как будет проходить анимация
+    ease  Анимация начинается медленно, затем ускоряется и к концу движения опять замедляется.
+    ease-in Анимация медленно начинается, к концу ускоряется.
+    ease-out Анимация начинается быстро, к концу замедляется.
+    ease-in-out Анимация начинается и заканчивается медленно.
+    linear Одинаковая скорость от начала и до конца.
+    */
+    /*transition-delay: 1s;*/
+    /*задержка*/
+}
+
+/*///////////////////////////////отступа первой строки блока текста, можно ставить и торицательную величину/////////////////////*/
+
+.nav li a:first-child {
+    text-indent: 36px;
+    /*Устанавливает величину отступа первой строки блока текста, можно ставить и торицательную величину */
+
+}
+
+/*////////////////////////////////////////////////////////градиент //////////////////////////////////////////////////////////*/
+
+.cont {
+    background: linear-gradient(#333,#cdcdcd);
+    /*Простой градиент с двумя цветами
+    что можно еще */
+    background: linear-gradient(45deg,#333,#cdcdcd);
+    /*Простой градиент с двумя цветами и градусом */
+    background: linear-gradient(-45deg,#333,#cdcdcd);
+    /*Простой градиент с двумя цветами и обратным градусом*/
+    background: -moz-radial-gradient(center,#333 30%, #bbb 70%);
+    /*круговой градиент с процентами*/
+}
+
+
+.cont1:after {
+    transition: opacity .2s ease-in-out .5s;
+    background: -moz-radial-gradient(transparent,#000);
+    background: -webkit-radial-gradient(transparent,#000);
+    /*/*круговой градиент первая точка - transparent т е прозрачная побакам черная*/
+
+}
+#cool {
+    -moz-transform: rotateY(30deg) translate(600px,100px) ;
+    -webkit-transform: rotateY(30deg) translate(600px,100px);
+    /*  -moz-transform: translate(30px,40px) rotate(30deg) scale(.8) skewx(30deg);*/
+    /*трансформация: перемещение(по х ,  по Y) вращение(градусы) размаер(в разы) скоз по Х(есть
+    	еще skewY по У)  */
+
+}
+/*//////////////////////////////////////врашщение в 3де единицыx y z///////////////////////////////////////*/
+
+#cube {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    -moz-transform-origin: 50% 50% -150px;
+
+    -moz-transform-style: preserve-3d;
+    -moz-transform: rotate3d(1,1,1,50deg);
+    /*врашщение в 3де единицы это подключение x y z, а градусы - это градусы вращение*/
+    -webkit-transform-origin: 50% 50% -150px;
+
+    -webkit-transform-style: preserve-3d;
+
+
+}
+.side {
+    box-shadow: 0 0 6px rgba(0,0,0,.5);
+    -moz-transform-origin: 50% 50% -150px;
+    /*'это изменения олтносительно точки: x y z*/
+    -webkit-transform-origin: 50% 50% -150px;
+}
+
+
+#side2 {
+    -moz-transform: rotateY(90deg);
+    -webkit-transform: rotateY(90deg);
+}
+/*///////////////////////////////////////////////////////анимация////////////////////////////////////////*/
+
+.sq {
+    animation: pook 2s linear infinite 2s alternate;
+    /*animation-name: pook;*/
+    /*название анимации*/
+    /*animation-duration: 2s;*/
+    /*время анимации*/
+    /*animation-timing-function: linear;*/
+    /*включение линейности*/
+    /*animation-iteration-count: infinite;*/
+    /*количество раз, infinite - это бесконечно разч */
+    /*animation-delay: 2s;*/
+    /*Задержка перед началом*/
+    /*animation-direction: alternate;*/
+    /*направление анимации есть еще*/
+    /*animation-direction: normal; - этьо нормалдьлное*/
+    /*animation-direction: reverse; - это наоборот*/
+
+
+}
+.sq:hover {
+    animation-play-state: paused;
+    /*Это остановка анимации*/
+}
+
+@-moz-keyframes pook{
+    0% {
+        -moz-transform: rotateX(0deg);
+
+    }
+    100% {
+        -moz-transform: rotateX(90deg);
+
+
+    }
+
+}
+/*так задаются ключевые кадры*/
+
+
+/*/////////////////////////////////////////шрифты////////////////////////////////*/
+
+@font-face {
+    font-family: toto;
+    src:url(111.ttf);
+}
+/*////////////////////////////////// включить не стандартнеые ключи//////////////////////////////////*/
+
+
+.font {
+    font-family: toto;
+}
+
+@font-face {
+    font-family: 'SignifyLite';
+    src: url('signifylite-webfont.eot');
+    src: url('signifylite-webfont.eot?#iefix') format('embedded-opentype'),
+    url('signifylite-webfont.woff') format('woff'),
+    url('signifylite-webfont.ttf') format('truetype'),
+    url('signifylite-webfont.svg#SignifyLite') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*https://www.fontsquirrel.com/tools/webfont-generator генератор шрифтов*/
+
+/*//////////////////////////////////////////////////Это адаптивность///////////////////////////////////////////////*/
+@media only screen and (max-width: 950px) {
+    .blok {
+        width: 480px;
+        background: #000;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .blok {
+        width: 320px;
+        background: red;
+    }
+    .soos,.boob {
+        height: 50px;
+    }
+}
+/*///////////////////////////////////////////шобы подинги работали правильно///////////////////////////////////////////// */
+
+.div {
+     width: 100px;
+     height: 100px;
+     padding: 10px;
+     border: 10px solid #eaeaea;
+     box-sizing: border-box;   /*Fпозволяет значения padding и border вычитать из ширины и длины блока*/
+     -moz-box-sizing: border-box; /*Firefox 1-3*/
+     -webkit-box-sizing: border-box; /* Safari */
+ }
+
+
+
+/*///////////////////////////////////////////////Выравнивание по центру/////////////////////////////////////////////////*/
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background: #767676;
+    text-align: center;
+    height: 600px;
+    display: block; /* добавляем блочность, если необходимо */
+    font-size: 0; /* убираем нежелательные отсутпы у дочерних элементов */
+}
+
+ul:before {
+    content:''; /* и */
+    height: 100%; /* вот */
+    display: inline-block; /* оно! */
+}
+
+li {
+    background: #ccc;
+    padding: 10px;
+    margin: 0 20px;
+    font-size: 16px; /* возвращаем размер шрифта */
+    display: inline-block; /* позволяем vertical-align выравнивать себя по вертикали */
+}
+
+ul:before, li {
+    vertical-align: middle; /* еще вот */
+}
+
+
+/* еще вот */
+
+.cobe {
+    position: absolute;
+    top:50%;
+    left:50%;
+    height: 300px;
+    width: 300px;
+    margin: -150px 0 0 -150px;
+
+
+}
+/*/////////////////////////////////////Немного html////////////////////////////////////////////////////////////////////
+
+/*input(type ='button' value="Clear") это кнопка, а валие это то что пропишется внутри кнопки*/
+/*input(type ='file') это выбрать фаил*/
+/*input(type ='number' min = '0') это строчка куда можно вписать число. нужно ставить мин чтобы в минус не ушел*/
+/*Тег <label> устанавливает связь между определенной меткой, в качестве которой обычно выступает текст, и
+             элементом формы (<input>, <select>, <textarea>). Такая связь необходима, чтобы изменять значения
+              элементов формы при нажатии курсором мыши на текст. Кроме того, с помощью <label> можно устанавливать
+               горячие клавиши на клавиатуре и переходить на активный элемент подобно ссылкам.
+                Существует два способа связывания объекта и метки. Первый заключается в использовании идентификатора id
+                внутри элемента формы и указании его имени в качестве атрибута for тега <label>.
+                При втором способе элемент формы помещается внутрь контейнера <label>.
+
+Синтаксис
+<input id="идентификатор"><label for="идентификатор">Текст</label>
+<label><input type="..."> Текст</label>
+ <label>Текст<label>Текст</label></label>
+
+
+
+ ///////////////////////////////////////////////<details> <summary>///////////////////////////// ///////////////////////////*/
+
+
+/*Тег <details>     используется для хранения информации, которую можно скрыть или показать по требованию пользователя.
+                     По умолчанию содержимое тега не отображается, для изменения статуса применяется атрибут open. */
+/* Синтаксис
+  <details>
+  <summary>Copyright 1999-2014.</summary>  - заголовок который должен быть у каждого
+  <p> - by Refsnes Data. All Rights Reserved.</p>
+  <p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+</details>
+
+//////////////////////////Поменять треугольник  перед <summary> или вообще его убрать////////////////////////
+
+<div class="treeHTML">Сайт
+    <details>
+    <summary>Блог</summary>
+      <div>HTML</div>
+      <div>CSS</div>
+      <div>JavaScript</div>
+    </details>
+
+.treeHTML summary {
+  display: block;
+  position: absolute;
+  left: -.5em;
+  top: .4em;
+  width: .9em;
+  height: .9em;
+  line-height: .9em;
+  text-align: center;
+  background: #fff;
+  font-size: 80%;
+  cursor: pointer;
+}
+.treeHTML summary:before {
+  content: "+";
+}
+.treeHTML details[open] summary:before {
+  content: "-";
+}
+.treeHTML summary::-webkit-details-marker {
+  display: none
+}
+.treeHTML details[open] summary {  убрать рамку при фокусе
+outline: none;
+}*/
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ /////////////////////////////////// работа с <input type="checkbox"/> <input type="radio"/>//////////////////////////////////
+
+<style>
+ #sem + label {
+     position: relative;
+     z-index: 1;
+ }
+#sem + label button {
+    position: relative;
+    z-index: -1;
+}
+#sem:checked + label button {
+    color: green;
+}
+</style>
+
+  <input type="checkbox" id="sem"/><label for="sem"><button>описание</button></label>
+
+
+
+
+\\\\\\\\\\\\\\\\\\\\\
+  <style>
+.Green {
+  background: green;
+  width: 130px;
+  height: 130px;
+  transition: .5s;
+}
+#chetyre:checked ~ .Green {
+  background: yellow;
+}
+</style>
+
+<input type="checkbox" id="chetyre"/>
+<div class="Green"></div>
+
+/////////////////////
+<style>
+.Green1 {
+  background: green;
+  width: 130px;
+  height: 130px;
+  transition: .5s;
+}
+#chetyre2:checked ~ .Green1 {
+  background: yellow;
+}
+#chetyre3:checked ~ .Green1 {
+  background: red;
+}
+</style>
+
+<input type="radio" checked="checked" name="chetyre"/> <input type="radio" name="chetyre" id="chetyre2"/> <input type="radio" name="chetyre" id="chetyre3"/>
+<div class="Green1"></div>
+
+
+///////////////////////
+<div class="checkbox">
+<input type="checkbox" id="check"><label for="check">Выбери меня</label>
+</div>
+
+.checkbox {
+	position:relative;
+	padding-left:25px;
+}
+.checkbox input[type=checkbox] {
+	display:none;
+}
+.checkbox label:after {
+	content:'';
+	display:block;
+	height:14px;
+	width:14px;
+	outline:1px solid #939598;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.checkbox input[type=checkbox]:checked + label:after {
+	outline:1px solid #939598;
+	border:2px solid #fff;
+	width:10px;
+	height:10px;
+	background-color:#63849F;
+}
+//////////////////////////////////////Горизонтальное центрирование/////////////////////////////////////////////////
+
+///////////////////////////////////// Это текст
+<style>
+  .outer {
+    text-align: center;
+    border: 1px solid blue;
+  }
+</style>
+
+<div class="outer">Текст</div>
+
+
+////////////////////////////////////////margin: auto
+<style>
+  .outer {
+    border: 1px solid blue;
+  }
+  .inner {
+    width: 100px;
+    border: 1px solid red;
+    margin: auto;
+  }
+</style>
+
+<div class="outer">
+  <div class="inner">Текст</div>
+</div>
+
+////////////////////////////////////////////////////////Вертикальное///////////////////////////////////////////////////////////
+
+/////////////////////////////////////////position:absolute + margin
+
+<style>
+  .outer {
+    position: relative;
+    height: 5em;
+    border: 1px solid blue;
+  }
+
+  .inner {
+    position: absolute;
+    top: 50%;
+    margin-top: -0.625em;
+    border: 1px solid red;
+  }
+</style>
+
+<div class="outer">
+  <div class="inner">Текст</div>
+</div>
+
+При стандартных настройках браузера высота строки line-height: 1.25, если поделить на два 1.25em / 2 = 0.625em.
+
+/////////////////////////////////////////line-height
+
+<style>
+  .outer {
+    height: 5em;
+    line-height: 5em;
+    border: 1px solid blue;
+  }
+</style>
+
+<div class="outer">
+  <span style="border:1px solid red">Текст</span>
+</div>
+
+///////////////////////////////////////////////////////И по горизонтали, и по вертикали///////////////////////////////////////
+
+.parent {
+  position: relative;
+}
+
+.child {
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -50px 0 0 -150px;
+}
+
+
+///////////////////////////translate
+
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+///////////////////////////////// flexbox
+
+//////////////////////////////////////////////////////////горизонтальное меню
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+1. li {display: inline;}
+
+Home Work About Blog Contact
+2. li {float: left;}
+
+Home
+Work
+About
+Blog
+Contact
+3. li {display: inline-block;}
+
+Home
+
+Work
+
+About
+
+Blog
+
+Contact
+4. ul {display: flex;}
+
+
+
+
+
+
+
+
+
+

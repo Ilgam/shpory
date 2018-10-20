@@ -1,0 +1,330 @@
+///////////////////////////Jade/////////////////////////////
+
+//Jade //это препроцессор html
+//Ссылки на официальную документацию и гитхаб:
+//http://jade-lang.com/
+
+//////////////////////////Теги, классы, id////////////////////
+
+// объявили класс
+.class-example
+nav.navigation-example
+// объявили несколько классов
+p.first-class.second-class
+// объявили id
+div#id-example
+//Если текст лишком большой, благодаря символу «|»  можем перенести на новую строку:
+p.first-class.second-class
+| Мы перенесли текст
+| на новую строку
+//- для того, что бы комментарий не компилировался,достаточно поставить в начале дефис
+// блочные комментарии задаются отступом
+
+///////////////////Атрибуты////////////////////////////////////
+
+//Атрибут в pug указываются после объявления тега или класса в круглых
+//скобках:
+// атрибуты в pug
+a.attribute-example(href='loftschool.ru',
+title='PugAtr')
+//В pugе сть возможность писать атрибуты с новой строки.
+input(type='checkbox'
+name='checkbox-example'
+checked='checked')
+
+//////////////////////////Переменные//////////////////////////
+
+// самое простое объявление и использование переменной
+- var pig = 'Peppa'
+h1 Hello, my name is #{pig}
+
+//результат
+//<h1>Hello, my name is Peppa</h1>
+
+//Помним, что переменные нам не нужно компилировать, и поэтому перед
+//«var» ставим дефис, чтобы не буферизировать их объявление.
+
+// мы можем объявить массив переменных
+- var personalInfo = {gender: 'girl', age: '5', skinColor:'pink'}
+h2= personalInfo.gender
+h3 I am #{personalInfo.age} years old. My skin is
+#{personalInfo.skinColor}
+
+//результат
+<h2>girl</h2>
+<h3>I am 5 years old. My skin is pink</h3>
+
+//Переменные можно объявлять внутри другой переменной:
+- var personalInfo = {name: 'Peppa', gender: 'girl', age:'5', skinColor: 'pink'}
+// используем переменную в новой переменной myName
+- var myName = 'Awesome, my name is ' + personalInfo.name
+h2= myName
+//результат
+//<h2>Awesome, my name is Peppa</h2>
+//мы можем использовать переменные везде, где только они могут нам понадобиться
+
+- var inputAtr = {type: 'password', text: 'please, enter your password'}
+input(type = inputAtr.type, placeholder = inputAtr.text)
+
+//результат
+//<input type="password" placeholder="please, enter your password">
+
+////////////Условия «if/else», «when», «while»,«for/each»///////////////////
+
+/////////////////////«if/else»
+
+- var name = 'Peter Parker'
+if name == 'Peter Parker'
+  p Amazing Spider-Man!
+ else
+  p Hello, I am #{name}
+
+//результат
+<p>Amazing Spider-Man!</p>
+
+/////////////////////«case» «When» 
+
+- var superhero = 'Peppa'
+  case superhero
+   when 'Bruce Wayne'
+    p Incredible Batman!
+   when 'Peter Parker'
+    p Amazing Speder-Man!
+  default
+p #{superhero} Pig
+
+//результат
+<p>Peppa Pig</p>
+
+////////////////////«While»
+
+- var n = 0
+ul.list
+while n <3
+li.item= n++
+
+// результат
+<ul class="list">
+<li class="item">0</li>
+<li class="item">1</li>
+<li class="item">2</li>
+</ul>
+
+////////////////////«Each»
+
+// пройдёмся с помощью each по всем элементам массива и
+//выведем вместе с данными номер каждой итерации в атрибуте
+//тега li
+ul
+each val, index in ['Peppa', 'Bruce Wayne', 'PeterParker']
+li(value=index)= index + ': ' + val
+
+// дополнительно покажем, что есть возможность указать свой ключ
+each val, index in {1: 'Peppa', 2: 'Bruce Wayne', 3:'Peter Parker'}
+li(value=index)= index + ': ' + val
+//результат
+<ul>
+<li value="0">0: Peppa</li>
+<li value="1">1: Bruce Wayne</li>
+<li value="2">2: Peter Parker</li>
+
+///////////////////////«For»
+
+- var superheroes = ['Peppa', 'Bruce Wayne', 'Peter Parker'];
+ul
+- for (var i=0; i<=2; i++) {
+ li= superheroes[i]
+- }
+
+//результат
+<ul>
+<li>Peppa</li>
+<li>Bruce Wayne</li>
+<li>Peter Parker</li>
+</ul>
+
+///////////////////////////Примеси (mixins)////////////////////
+
+//Примеси,также, как и функции, могут принимать параметры в качестве входных
+//данных и генерируют соответствующую разметку.При вызове необходимо 
+//использовать символ «+»
+
+// объявим миксин, который будет выводить название команды
+mixin nameOfTeam(name)
+ p#{name} team
+// вызовем наш миксин
++nameOfTeam('GeorgeMartin')
+
+//результат 
+//<p>George Martin team</p>
+
+// объявим миксин, который будет выводить участникакоманды
+mixin team(person, post)
+li#{person} : #{post}
+ul.teamList
++team('JonSnow', 'director')
++team('DaenerysTargaryen', 'front-end')
++team('NedStark', 'back-end')
++team('TyrionLannister', 'manager')
++team('AryaStark', 'designer')
+
+//результат
+<ul class="teamList">
+<li>Jon Snow : director</li>
+<li>Daenerys Targaryen : front-end</li>
+<li>Ned Stark : back-end</li>
+<li>Tyrion Lannister : manager</li>
+<li>Arya Stark : designer</li>
+</ul>
+
+//Входные параметры примесей так же могут использоваться в качестве
+//данных атрибутов.
+mixin warriors(name, ...items)
+ul(class=name)
+each item in items
+// &attributes (atributes) – позволяет нам после вызова
+//миксина добавлять атрибуты, не ломая наш код
+li&attributes(attributes)= 'Number ' + item
+
++warriors('samurais', 145, 146, 147)(class='samurai')
+
+//результат
+<ul class="samurais">
+<li class="samurai">Number 145</li>
+<li class="samurai">Number 146</li>
+<li class="samurai">Number 147</li>
+</ul>
+
+///////////////Шаблонизация страниц Include//////////////////
+
+//Include позволяют вставлять контент из одного pug-файла в другой.
+
+//- _includes/_head.pug - здесь лежит шаблон тега head
+head
+style
+//- обратите внимание, что pug позволяет вставлять в
+//документ не только pug-файлы, но и необходимый код стилей
+//css или javascript
+include ../../style/style.css
+title Site about everything
+//- _includes/header.pug - здесь лежит блок header
+header.header
+h2 Hello, I am header
+
+//Подключаем эти файлы на нашу общую страницу my.pug:
+doctype html
+html
+//- подключаем файл _head
+include ../_includes/_head
+body
+//- подключаем файл _header
+include ../_includes/_header
+p 42!
+p You know all about includes
+
+//результат
+<!DOCTYPE html>
+   <html>
+     <head>
+     <style>
+        h2 { color: green; }
+     </style>
+       <title>Site about everything</title>
+     </head>
+       <body>
+         <header class="header">
+         <h2>Hello, I am header</h2>
+         </header>
+         <p>42!</p>
+         <p>You know all about includes</p>
+       </body>
+   </html>
+
+
+///////////////////////Extends block////////////////////////////
+
+//При помощи extends мы можем просто наследовать некий шаблон станицы
+
+//- general.pug - общий шаблон, от которого наследуются   наши страницы
+doctype html
+    html
+    head
+    //- объявляем наш блок
+    block title
+    //- title по умолчанию
+    title General default title
+    body
+    block content
+
+
+    //- my.pug - наследуется от общего шаблона general
+    extends ../general
+    block title
+    title this is My title
+    block content
+    include ../_includes/_header
+    p 42!
+    p You know all about includes
+
+
+    //- cat.pug - также как и my.pug наследуется от общего шаблона general
+    extends ../general
+    block title
+    title this is Cat title. Mew
+    block content
+    //- подключаем файл _header
+    include ../_includes/_header
+    p 42MEW!
+    p mew-mew-mew
+//В итоге на выходе получаем два html файла (my.html и cat.html
+//соответственно):
+<!DOCTYPE html>
+    <html>
+    <head>
+    <title>this is My title</title>
+    </head>
+    <body>
+    <header class="header">
+    <h2>Hello, I am header</h2>
+    </header>
+    <p>42!</p>
+    <p>You know all about includes</p>
+    </body>
+    </html>
+
+<!DOCTYPE html>
+    <html>
+    <head>
+    <title>this is Cat title. Mew</title>
+    </head>
+    <body>
+    <header class="header">
+    <h2>Hello, I am header</h2>
+    </header>
+    <p>42MEW!</p>
+    <p>mew-mew-mew</p>
+    </body>
+    </html>
+/////////////////////////////////Фильтры//////////////////////////////////
+
+ //Фильтры в pug позволяют использовать другие языки в шаблонах. Фильтры
+ //обозначаются префиксом «:»
+:markdown
+    My answer: **42!**
+    # You know all about includes
+    ## You know all about includes
+    ### You know all about includes
+
+<p>My answer: <strong>42!</strong></p>
+    <h1 id="you-know-all-about-includes">You know all about includes</h1>
+    <h2 id="you-know-all-about-includes">You know all about includes</h2>
+    <h3 id="you-know-all-about-includes">You know all about includes</h3>
+  //  Ниже представлен список наиболее популярных фильтров pug:
+    ◦ :sass
+    ◦ :less
+    ◦ :markdown
+    ◦ :coffee-script
+    ◦ :babel
+
+
+

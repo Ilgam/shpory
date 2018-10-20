@@ -1,0 +1,227 @@
+/////////////////////////////////////PostCSS + Gulp//////////////////////////////////////////////
+
+//Устанавливаем локально необходимые пакеты:
+
+//npm i --save gulp-postcss gulp concat
+
+//Подключаем их в сборку в gulpfile.js:
+
+//const concat = require('gulp-concat');
+//const gulp = require('gulp');
+//const postcss = require('gulp-postcss');
+//gulp.task('styles', function() {
+//  const processors = [
+//  ];
+//return gulp.src('./css/**/*.css')
+//.pipe(postcss(processors))
+//.pipe(concat('bundle.min.css'))
+//.pipe(gulp.dest('./public'));
+//});
+//gulp.task('watch', function() {
+//gulp.watch('./css/**/*.css', function() {
+//gulp.run('styles');
+//})
+//});
+//gulp.task('default', ['styles', 'watch']);
+
+/////////////////////////////////Подключение плагинов////////////////////////////////////////////////
+
+//Весь перечень плагинов с примерами и инструкциями можно найти
+//на сайте http://postcss.parts/
+//Для подключения плагина в сборку необходимо:
+//        • Скачать и установить локально с помощью команды npm i --save *название плагина*
+//       • Подключить в сборку в файл gulpfile.js c помощью команды require
+//       • Добавить в массив плагинов передаваемый в postcs – в нашем,
+//       частном примере, это переменная processors типа массив
+
+//////////////////////////////////////nested (вложенными)////////////////////////////////////////////
+//Установка:
+//npm i --save postss-nested
+
+///////////////Преобразовывает из:
+
+.phone {
+  &_title {
+    width: 500px;
+    @media (max-width: 500px) {
+      width: auto;
+    }
+    body.is_dark & {
+      color: white;
+    }
+  }
+  img {
+    display: block;
+  }
+}
+
+///////////////в:
+
+.phone_title {
+  width: 500px;
+}
+@media (max-width: 500px) {
+  .phone_title {
+    width: auto;
+  }
+}
+body.is_dark .phone_title {
+  color: white;
+}
+.phone img {
+  display: block;
+}
+
+///////////////////////////////////short (короткие)//////////////////////////////////////////////
+
+//Установка:
+//npm i --save postss-short
+
+////////Преобразовывает из:
+.icon {
+  size: 48px;
+}
+
+////////в:
+.icon {
+  width: 48px;
+  height: 48px;
+}
+////////Преобразовывает из:
+.frame {
+  margin: * auto;
+}
+////////в:
+.frame {
+  margin-right: auto;
+  margin-left: auto;
+}
+////////Преобразовывает из:
+.banner {
+  position: fixed 0 0 *;
+}
+////////в:
+.banner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+////////Преобразовывает из:
+.canvas {
+  color: #abccfc #212231;
+}
+////////в:
+.canvas {
+  color: #abccfc;
+  background-color: #212231;
+}
+////////Преобразовывает из:
+.container {
+  border: 1px 2px #343434;
+}
+////////в:
+.container {
+  border-width: 1px 2px;
+  border-color: #343434;
+}
+////////Преобразовывает из:
+.heading {
+  font-size: 1.25em 2;
+}
+////////в:
+.heading {
+  font-size: 1.25em;
+  line-height: 2;
+}
+////////Преобразовывает из:
+p {
+  font-weight: light;
+}
+////////в:
+p {
+  font-weight: 300;
+}
+////////Преобразовывает из:
+.section {
+  text: dimgrey bold center
+  uppercase 1.25em 1.5 .05em;
+}
+////////в:
+.section {
+  color: dimgrey;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  line-height: 1.5;
+  letter-spacing: .05em;
+}
+////////Преобразовывает из:
+.menu-item[-active] {
+  background: #f3f3f3;
+}
+////////в:
+.menu-item[data-active] {
+  background: #f3f3f3;
+}
+
+///////////////////////////////////////////////////////assets////////////////////////////////////////
+//Установка:
+//npm i --save postss-assets stylelint
+
+//Инлайнить  изображения в  стили:
+body {
+  background: inline('images/foobar.png');
+}
+//Узнавать  размеры  изображения:
+body {
+  width: width('images/foobar.png', 2); /*
+160px */
+  height: height('images/foobar.png', 2); /*
+120px */
+  background-size: size('images/foobar.png',
+          2); /* 160px 120px */
+}
+
+
+
+
+////////////////////////////////////////////////autoprefixer////////////////////////////////////////
+
+//Установка:
+//npm i --save autoprefixer
+
+////////Преобразовывает из:
+:fullscreen a {
+         display: flex
+       }
+////////в:
+:-webkit-full-screen a {
+  display: -webkit-box;
+  display: flex
+}
+:-moz-full-screen a {
+  display: flex
+}
+:-ms-fullscreen a {
+  display: -ms-flexbox;
+  display: flex
+}
+:fullscreen a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+
+////////Преобразовывает из:
+a {
+  display: flex;
+}
+////////в:
+a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex
+}

@@ -1,0 +1,321 @@
+/////////////////////////////////////Sass/////////////////////////////////
+
+//Sass является  самым мощным css-препроцессором
+
+//Sass имеет два синтаксиса:
+//1) sass – упрощённый синтаксис css, который отличается отсутствием
+   //фигурных скобок, а разделение свойств точкой с запятой заменяется
+   //новой строкой;
+//2) scss (SassyCSS) – основан на стандартном синтаксисе CSS, как и CSS
+  //использует фигурные скобки
+
+/////////////////////////Компиляция//////////////////////////////////
+
+//sass input.scss output.css    - Компиляция
+
+//Компилировать файлы sass можно используя ключ ––-watch. Этот ключ
+//говорит программе следить за указанными файлами. Т.е. один раз запустив
+//команду, sass пересоберёт все необходимые css-файлы:
+
+//sass–-watch app/sass:public/stylesheets
+//В данном примере sass отслеживает все изменения файлов в каталоге
+//app/sass, а результат сохраняет в каталоге public/stylesheets.
+
+////////////////////////Вложенность///////////////////////
+
+.parent {
+  .first-children {
+    background: #000;
+  }
+  .second-children {
+    background: #fff;
+  }
+}
+
+//результат
+
+.parent .first-children {
+  background: #000;
+}
+.parent .second-children {
+  background: #fff;
+}
+
+
+////////////////«&» - ссылка на  родителя элемента////////////////////
+
+.parent {
+  color: silver;
+  &:hover {
+    color: gold;
+  }
+}
+
+// Результат
+.parent {
+  color: silver;
+}
+.parent:hover {
+color: gold;
+}
+
+//также удобно использовать, когда необходимо добавить к родительскому
+//селектору последующий суффикс
+
+ul .main-list {
+  position: relative;
+  li &__item {
+    position: absolute;
+    top: 0;
+  }
+}
+
+//результат
+ul .main-list {
+  position: relative;
+}
+li ul .main-list__item {
+  position: absolute;
+  top: 0;
+}
+//Интересное свойство вложенности можно наблюдать в каком-либо
+//пространстве имён. Например, рассмотрим пространство имён font:
+
+.link-example {
+  font: {
+    family: "Roboto Mono";
+    size: 20em;
+    weight: 700;
+  }
+}
+
+//результат
+.link-example {
+  font-family: "Roboto Mono";
+  font-size: 20em;
+  font-weight: 700;
+}
+/////////////////////////////////перменные//////////////////////
+//Для  задания переменной используется символ «$».
+
+// объявим переменную главного цвета
+$mainColorWhite: #f8f8ff;
+// используем нашу переменную внутри селектора
+.variable-example {
+  color: $mainColorWhite;
+}
+
+//результат
+.variable-example {
+  color: #f8f8ff;
+}
+
+//Sass поддерживает семь основных типов данных:
+// Числа (21px, 21, 2.1)
+// Строки (“string”, ‘string’, string)
+// Цвета (gold, #ffd700, rgba(255, 215, 0, 1))
+// Булевы значения (true, false)
+// Null
+// Списки значений (Roboto Mono, sans-serif; 1.5em 1em 0 2em)
+// Массивы (key1: value1, key2: value2)
+
+///////////////////////////Функции//////////////////////////
+
+//Полный список доступных функций можно посмотреть на странице
+//http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+// покажем пример использования функции random
+// объявим переменную, которая будет задавать лимит для функции случайного числа
+$randomLimit: 9;
+// используем нашу переменную внутри функции random
+.function-random {
+  opacity: 0 + #{'.'} + random($randomLimit);
+}
+
+//результат
+.function-random {
+  opacity: 0.3;
+}
+
+/////////////////////////Правила и директивы////////////////////////
+
+//«@import». Директива import позволяет импортировать sass файлы
+
+// импортирует весь код указанных файлов
+//@import '_auth.scss';
+//@import '_first.scss';
+
+//можно не указывать расширение - Sass так же определит
+//нужные файлы
+//@import '_auth';
+//@import '_first';
+
+
+//«@media». Директива media работает практически также, как и в привычном CSS.
+
+// пример директивы media и использования в ней
+//объявленной переменной
+$widthOfDesktop: 1800px;
+$mainMedia: screen;
+@media #{$mainMedia} {
+  .media-example {
+    @media (width: $widthOfDesktop) {
+      margin-top: 20px;
+    }
+  }
+}
+
+//результат
+@media screen and (width: 1800px) {
+  .media-example {
+    margin-top: 20px; }
+
+}
+
+//«@extend». Эта директива позволяет выполнять функцию наследования  в Sass.
+
+.example-extend {
+  border: 1px solid #000;
+  color: #000;
+}
+.good-message {
+  @extend .example-extend;
+  border-color: green;
+}
+.error-message {
+  @extend .example-extend;
+  border-color: red;
+}
+
+//результат
+.example-extend, .good-message, .error-message {
+  border: 1px solid #000;
+  color: #000;
+}
+.good-message {
+  border-color: green;
+}
+.error-message {
+  border-color: red;
+}
+
+///////////////////////////Условия @if////////////////////////////////
+
+//Если это выражение возвращает true, то условие выполняются и стили, вложенные в неё,
+//применяются.
+
+// пример использования директивы @if
+$variableColor: firstRainbowColor;
+.if-example {
+  @if $variableColor == secondRainbowColor {
+    color: orange;
+  } @else if $variableColor == thirdRainbowColor {
+    color: yellow;
+  } @else if $variableColor == firstRainbowColor {
+    color: red;
+  } @else {
+    color: violet;
+  }
+}
+
+//результат
+.if-example{
+  color: red; }
+
+///////////////////////////Цикл @for /////////////////////////////
+
+//Директива имеет две формы:
+
+//1) @for $var from <начало>through <конец>
+//2) @for $var from <начало>to <конец>
+
+//Первое выражение отличается от второго тем, что слово through говорит
+//нам, что значение <конец> включается в диапазон значение, а to– наоборот
+//не включено.
+
+// пример использования директивы @for
+@for $i from 1 through 3 {
+  .list-item-#{$i} { width: 20px * $i; }
+}
+
+//результат
+.list-item-1 {
+  width: 20px;
+}
+.list-item-2 {
+  width: 40px;
+}
+.list-item-3 {
+  width: 60px;
+}
+
+///////////////////////////Перебор @each//////////////////////////////
+
+
+// пример использования директивы @each
+// пройдёмся по списку цветов радуги
+@each $color in red, orange, yellow, green {
+  .#{$color}-col {
+    color: $color;
+  }
+}
+.red-col {
+  color: red; }
+.orange-col {
+  color: orange; }
+.yellow-col {
+  color: yellow; }
+.green-col {
+  color: green;
+}
+
+//////////////////////////Миксины @mixin//////////////////////////////////
+
+//Чтобы объявить миксин, используется директива @mixin, после которого
+//стоит имя нашего миксина. Что бы вызвать наш объявленный миксин,
+//используется директива @include
+
+// создадим миксин, укажем необходимые аргументы и  присвоим им значения по умолчанию
+@mixin example-style-link($color: blue, $line: underline)
+{
+  text-decoration: {
+    color: $color;
+    line: $line;
+    style: double;
+  }
+}
+// для вызова нашего миксина используем @include
+a {
+  .first-link {
+    @include example-style-link(red);
+  }
+}
+a {
+  .second-link {
+    @include example-style-link(green, none);
+  }
+}
+
+//Результат
+a .first-link {
+  -webkit-text-decoration-color: red;
+  text-decoration-color: red;
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+  -webkit-text-decoration-style: double;
+  text-decoration-style: double; }
+a .second-link {
+  -webkit-text-decoration-color: green;
+  text-decoration-color: green;
+  -webkit-text-decoration-line: none;
+  text-decoration-line: none;
+  -webkit-text-decoration-style: double;
+  text-decoration-style: double; }
+
+
+
+
+
+
+
+

@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/Adaptive_Web_Design/adap.css" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/Adaptive_Web_Design/bootstrap/worcflowMain/app/index.jade" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Dev/2.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/Dev/3.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/Dev/3_1/Pet.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/Dev/3_1/user.js" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/GulpOptionsOLD/read.md" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/HandlebarsSpora.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/JqurySpora.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/PractikNode.js/Chat/chat.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/PractikNode.js/Chat/index.html" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/PractikNode.js/Chat/server.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/PractikNode.js/practick.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/PractikNode.js/transform.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/ShporaJS.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/ShporaMongoDB/mongoDB.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaAjax.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaCss.css" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaNodejs/Domain.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaNodejs/EE.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaNodejs/Path_Url_Util_jsdom.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaNodejs/Stream.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaNodejs/TCP.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaNodejs/express.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaNodejs/express2.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaNodejs/fs.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaNodejs/global_process_Buffer" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaNodejs/http.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/SporaNodejs/socket.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/practickJquery+Ajax+Habdlebars/Listing 01.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/JS/ShporaAjax.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/JS/ShporaES6.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/JS/ShporaHandlebars.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/JS/ShporaJS.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/JS/ShporaJqury.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/JS/ShporaValidationJQuery.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Server/ShporaMongoDB/mongoDB.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Server/SporaNodejs/Domain.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Server/SporaNodejs/EE.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Server/SporaNodejs/Path_Url_Util_jsdom.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Server/SporaNodejs/Stream.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Server/SporaNodejs/TCP.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Server/SporaNodejs/express.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Server/SporaNodejs/express2.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Server/SporaNodejs/fs.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Server/SporaNodejs/global_process_Buffer" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Server/SporaNodejs/http.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Server/SporaNodejs/socket.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Verstka/ShporaAdap.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Verstka/ShporaCss.css" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/practic/PractikNode.js/Chat/chat.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/practic/PractikNode.js/Chat/index.html" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/practic/PractikNode.js/Chat/server.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/practic/PractikNode.js/practick.js" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/practic/PractikNode.js/transform.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/practic/practickJquery+Ajax+Habdlebars/Listing 01.html" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/script.js" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/validationJQuery.js" charset="UTF-8" />
   </component>
 </project>

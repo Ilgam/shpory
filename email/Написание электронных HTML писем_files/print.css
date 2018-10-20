@@ -1,7 +1,0 @@
-body {margin:0; padding:0; border:0; font-size:12pt;}
-
-#header, #top_menu, #sideLeft, #sideRight, #content .contentConteiner, #rusellerOverlay, #big_loader, #rusellerBox, #footer nav
-{
-    display: none;
-}
-#content #generalContent{display: block;}
